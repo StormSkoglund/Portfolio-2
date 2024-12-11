@@ -225,7 +225,7 @@ const App: React.FC = () => {
                     <img
                       src="/assets/holistay.png"
                       alt="A screenshot from a hotel-booking website"
-                      className="w-full h-max object-cover"
+                      className="w-full h-max object-cover rounded-2xl"
                     />
                     <div className="mt-1 text-center">
                       <div className="text-base md:text-xl font-semibold">
