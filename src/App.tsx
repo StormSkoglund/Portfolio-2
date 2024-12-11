@@ -15,16 +15,16 @@ const App: React.FC = () => {
       <div className="flex flex-col justify-center items-center min-h-screen bg-blue-100">
         <div className="relative w-full flex flex-col items-center">
           <div className="flex items-end justify-center mt-6 z-30">
-            <FaArrowRight className="text-2xl md:text-4xl lg:text-5xl text-white opacity-80" />
+            <FaArrowRight className="text-xl md:text-4xl lg:text-5xl text-white opacity-80" />
           </div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-1/2 h-full  bg-customBlue opacity-90 flex flex-col justify-start items-center">
-              <p className="text-center text-white font-semibold text-2xl md:text-4xl lg:text-5xl mt-4">
+              <p className="text-center text-white font-semibold text-xl md:text-4xl lg:text-5xl mt-4">
                 Archaeologist
               </p>
             </div>
             <div className="w-1/2 h-full  bg-customGold opacity-90 flex flex-col justify-start items-center">
-              <p className="text-center text-customBlue font-semibold text-2xl md:text-4xl lg:text-5xl mt-4">
+              <p className="text-center text-customBlue font-semibold text-xl md:text-4xl lg:text-5xl mt-4">
                 Frontend Developer
               </p>
             </div>
@@ -83,9 +83,9 @@ const App: React.FC = () => {
                 Frontend Development
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row justify-between align-middle items-center">
+            <div className="flex flex-col lg:flex-row justify-between align-middle items-center p-3">
               <CarouselProvider
-                className="w-full max-w-4xl m-10 opacity-85 h-4/6 relative hover:animate-flicker rounded-2xl bg-slate-300"
+                className="w-full max-w-4xl m-10 h-4/6 relative hover:animate-flicker rounded-2xl bg-slate-300"
                 naturalSlideWidth={90}
                 naturalSlideHeight={130}
                 totalSlides={4}
@@ -133,7 +133,7 @@ const App: React.FC = () => {
                 className="w-10/12 m-10 sm:w-8/12 md:w-6/12 opacity-85 lg:w-4/12 xl:w-3/12 h-4/6"
               />
               <CarouselProvider
-                className="w-full max-w-4xl m-10 opacity-90 h-4/6 relative hover:animate-flicker rounded-2xl bg-slate-300"
+                className="w-full max-w-4xl m-10 h-4/6 relative hover:animate-flicker rounded-2xl bg-slate-300"
                 naturalSlideWidth={90}
                 naturalSlideHeight={130}
                 totalSlides={3}
