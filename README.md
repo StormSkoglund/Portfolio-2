@@ -4,6 +4,13 @@
 
 # Welcome to my Frontend Portfolio 2024. Here, you'll find a collection of this year's school projects.
 
+## Tech Stack For This Project
+
+- React
+- TypeScript
+- Vite
+- Tailwind
+
 ## Installation Steps:
 
 Clone the repository using https://github.com/StormSkoglund/Portfolio-2.git
