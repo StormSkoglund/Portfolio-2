@@ -5,7 +5,7 @@ import {
   Slide,
   Slider,
 } from "pure-react-carousel";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Header from "./components/layout/Header";
@@ -13,24 +13,27 @@ import Footer from "./components/layout/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const App: React.FC = () => {
-  function setCarouselHeight() {
-    const carousel = document.getElementById("carousel");
-    if (carousel) {
-      let height;
-      if (window.innerWidth >= 1300) {
-        height = "90vh";
-      } else if (window.innerWidth >= 1024) {
-        height = "110vh";
-      } else {
-        height = "100vh";
+  useEffect(() => {
+    function setCarouselHeight() {
+      const carousel = document.getElementById("carousel");
+      if (carousel) {
+        carousel.style.height = "auto";
+        carousel.style.minHeight =
+          window.innerWidth >= 1024 ? "600px" : "500px";
       }
-      carousel.style.height = height;
     }
-  }
-  window.addEventListener("resize", setCarouselHeight);
-  window.addEventListener("load", setCarouselHeight);
-  window.addEventListener("resize", setCarouselHeight);
-  window.addEventListener("load", setCarouselHeight);
+
+    setCarouselHeight();
+
+    window.addEventListener("resize", setCarouselHeight);
+    window.addEventListener("load", setCarouselHeight);
+
+    return () => {
+      window.removeEventListener("resize", setCarouselHeight);
+      window.removeEventListener("load", setCarouselHeight);
+    };
+  }, []);
+
   return (
     <>
       <HelmetProvider>
@@ -180,12 +183,12 @@ const App: React.FC = () => {
                 />
                 <div
                   id="carousel"
-                  className="w-full max-w-4xl m-10 relative hover:animate-flicker rounded-2xl bg-slate-300"
+                  className="w-full max-w-4xl m-10 relative hover:animate-flicker rounded-2xl bg-slate-300 min-h-[500px] lg:min-h-[600px]"
                 >
                   <CarouselProvider
                     className="w-full h-full"
                     naturalSlideWidth={100}
-                    naturalSlideHeight={100}
+                    naturalSlideHeight={120}
                     totalSlides={3}
                   >
                     <Slider className="h-full" id="work">
