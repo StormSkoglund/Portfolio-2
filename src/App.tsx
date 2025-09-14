@@ -22,7 +22,7 @@ const App: React.FC = () => {
           window.innerWidth >= 1024 ? "800px" : "600px";
       }
     }
-
+    // set initial height and wire events
     setCarouselHeight();
 
     window.addEventListener("resize", setCarouselHeight);
@@ -191,28 +191,28 @@ const App: React.FC = () => {
                     naturalSlideHeight={140}
                     totalSlides={3}
                   >
-                    <Slider className="h-full" id="work">
+                    <Slider className="h-full overflow-y-auto" id="work">
                       <Slide
                         index={0}
-                        className="flex flex-col items-center justify-start h-full p-4"
+                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
                       >
                         <img
                           src="/assets/semproj2.png"
                           alt="A screenshot from an auction-house website"
-                          className="w-full max-h-[50%] object-contain rounded-2xl mb-4"
+                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
                         />
-                        <div className="flex-1 text-center flex flex-col justify-between">
+                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
                           <div>
-                            <div className="text-base lg:text-xl font-semibold">
+                            <div className="text-sm md:text-base lg:text-xl font-semibold">
                               Auctio
                             </div>
-                            <div className="mt-2 text-base lg:text-lg font-normal">
+                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
                               Tech Stack:
                             </div>
-                            <div className="text-small lg:text-xl font-light text-black">
+                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
                               HTML5, JavaScript, Bootstrap, SCSS.
                             </div>
-                            <p className="mt-2 text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
+                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
                               The Auctio website was part of the Noroff Semester
                               Project 2 exam; it allows users to search through
                               an inventory of student-made items and bid on
@@ -220,14 +220,14 @@ const App: React.FC = () => {
                               sale.
                             </p>
                           </div>
-                          <div className="mt-4 space-y-2">
+                          <div className="mt-3 space-y-2 pb-2">
                             <a
                               href="https://github.com/StormSkoglund/Semester-Project-2"
                               target="_blank"
                               rel="noopener noreferrer"
                               aria-label="Auctio GitHub Repo"
                             >
-                              <p className="text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
+                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
                                 Visit GitHub Repository
                               </p>
                             </a>
@@ -237,7 +237,7 @@ const App: React.FC = () => {
                               rel="noopener noreferrer"
                               aria-label="Auctio Live Demo"
                             >
-                              <p className="text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
+                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
                                 View Live Demo
                               </p>
                             </a>
@@ -246,38 +246,38 @@ const App: React.FC = () => {
                       </Slide>
                       <Slide
                         index={1}
-                        className="flex flex-col items-center justify-start h-full p-4"
+                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
                       >
                         <img
                           src="/assets/screen-buythat.png"
                           alt="A screenshot from a online shop"
-                          className="w-full max-h-[50%] object-contain rounded-2xl mb-4"
+                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
                         />
-                        <div className="flex-1 text-center flex flex-col justify-between">
+                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
                           <div>
-                            <div className="text-base lg:text-xl font-semibold">
+                            <div className="text-sm md:text-base lg:text-xl font-semibold">
                               BuyThat
                             </div>
-                            <div className="mt-2 text-base lg:text-lg font-normal">
+                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
                               Tech Stack:
                             </div>
-                            <div className="text-small lg:text-xl font-light text-black">
+                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
                               React, Vite, JavaScript, Tailwind.
                             </div>
-                            <p className="mt-2 text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
+                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
                               The BuyThat website, developed for a Noroff
                               assignment, lets users search for products from a
                               REST API and simulate purchase.
                             </p>
                           </div>
-                          <div className="mt-4 space-y-2">
+                          <div className="mt-3 space-y-2 pb-2">
                             <a
                               href="https://github.com/StormSkoglund/frontend-frameworks-ca"
                               target="_blank"
                               rel="noopener noreferrer"
                               aria-label="BuyThat GitHub Repository"
                             >
-                              <p className="text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
+                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
                                 Visit GitHub Repository
                               </p>
                             </a>
@@ -287,7 +287,7 @@ const App: React.FC = () => {
                               rel="noopener noreferrer"
                               aria-label="BuyThat Live Demo"
                             >
-                              <p className="text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
+                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
                                 View Live Demo
                               </p>
                             </a>
@@ -296,25 +296,25 @@ const App: React.FC = () => {
                       </Slide>
                       <Slide
                         index={2}
-                        className="flex flex-col items-center justify-start h-full p-4"
+                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
                       >
                         <img
                           src="/assets/holistay.png"
                           alt="A screenshot from a hotel-booking website"
-                          className="w-full max-h-[50%] object-contain rounded-2xl mb-4"
+                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
                         />
-                        <div className="flex-1 text-center flex flex-col justify-between">
+                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
                           <div>
-                            <div className="text-base lg:text-xl font-semibold">
+                            <div className="text-sm md:text-base lg:text-xl font-semibold">
                               HoliStay
                             </div>
-                            <div className="mt-2 text-base lg:text-lg font-normal">
+                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
                               Tech Stack:
                             </div>
-                            <div className="text-small lg:text-xl font-light text-black">
+                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
                               React, Vite, TypeScript, Tailwind.
                             </div>
-                            <p className="mt-2 text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
+                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
                               The HoliStay website, developed for the final
                               Noroff exam, is a booking platform featuring a
                               user-friendly interface for both customers and
@@ -323,14 +323,14 @@ const App: React.FC = () => {
                               also enabling admins to rent out their own venues.
                             </p>
                           </div>
-                          <div className="mt-4 space-y-2">
+                          <div className="mt-3 space-y-2 pb-2">
                             <a
                               href="https://github.com/StormSkoglund/Project-Exam-2"
                               target="_blank"
                               rel="noopener noreferrer"
                               aria-label="HoliStay GitHub Repo"
                             >
-                              <p className="text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
+                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
                                 Visit GitHub Repository
                               </p>
                             </a>
@@ -340,7 +340,7 @@ const App: React.FC = () => {
                               rel="noopener noreferrer"
                               aria-label="HoliStay Live Demo"
                             >
-                              <p className="text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
+                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
                                 View Live Demo
                               </p>
                             </a>
@@ -348,10 +348,10 @@ const App: React.FC = () => {
                         </div>
                       </Slide>
                     </Slider>
-                    <ButtonBack className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
+                    <ButtonBack className="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
                       <span>Back</span>
                     </ButtonBack>
-                    <ButtonNext className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
+                    <ButtonNext className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
                       <span>Next</span>
                     </ButtonNext>
                   </CarouselProvider>
