@@ -2,6 +2,7 @@ import {
   ButtonBack,
   ButtonNext,
   CarouselProvider,
+  DotGroup,
   Slide,
   Slider,
 } from "pure-react-carousel";
@@ -10,6 +11,8 @@ import { FaArrowRight } from "react-icons/fa";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import ProjectCard from "./components/ProjectCard";
+import CaseStudy from "./components/CaseStudy";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const App: React.FC = () => {
@@ -18,8 +21,9 @@ const App: React.FC = () => {
       const carousel = document.getElementById("carousel");
       if (carousel) {
         carousel.style.height = "auto";
+        // keep JS minHeight in sync with CSS min-h values
         carousel.style.minHeight =
-          window.innerWidth >= 1024 ? "800px" : "600px";
+          window.innerWidth >= 1024 ? "420px" : "320px";
       }
     }
     // set initial height and wire events
@@ -35,8 +39,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <HelmetProvider>
+    <HelmetProvider>
         <Header />
         <div className="flex flex-col justify-center items-center min-h-screen bg-blue-100">
           <Helmet>
@@ -122,7 +125,7 @@ const App: React.FC = () => {
               </div>
               <div className="flex flex-col xl:flex-row justify-between align-middle items-center p-3">
                 <CarouselProvider
-                  className="w-full max-w-4xl m-10 h-4/6 relative hover:animate-flicker rounded-2xl bg-slate-300"
+                  className="w-full max-w-4xl m-10 h-4/6 relative hover:animate-flicker rounded-2xl bg-slate-300 z-20"
                   naturalSlideWidth={90}
                   naturalSlideHeight={120}
                   totalSlides={4}
@@ -169,6 +172,7 @@ const App: React.FC = () => {
                       />
                     </Slide>
                   </Slider>
+                  <DotGroup className="flex justify-center mt-4 space-x-2" />
                   <ButtonBack className="absolute top-1/2 left-0 transform -translate-y-1/2 opacity-80 bg-gray-800 hover:scale-110 duration-500 rounded-2xl  text-white p-2">
                     <span>Back</span>
                   </ButtonBack>
@@ -183,171 +187,52 @@ const App: React.FC = () => {
                 />
                 <div
                   id="carousel"
-                  className="w-full max-w-4xl m-10 relative hover:animate-flicker rounded-2xl bg-slate-300 min-h-[600px] lg:min-h-[800px]"
+                  className="w-full max-w-4xl m-4 md:m-10 relative hover:animate-flicker rounded-2xl bg-white/90 shadow-lg min-h-[320px] md:min-h-[420px] z-40"
                 >
                   <CarouselProvider
-                    className="w-full h-full"
+                    className="w-full"
                     naturalSlideWidth={100}
-                    naturalSlideHeight={140}
+                    naturalSlideHeight={60}
+                    isIntrinsicHeight={true}
+                    visibleSlides={1}
                     totalSlides={3}
                   >
-                    <Slider className="h-full overflow-y-auto" id="work">
-                      <Slide
-                        index={0}
-                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
-                      >
-                        <img
-                          src="/assets/semproj2.png"
-                          alt="A screenshot from an auction-house website"
-                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
+                    <Slider className="overflow-visible" id="work">
+                      <Slide index={0} className="h-full">
+                        <ProjectCard
+                          title="Auctio"
+                          role="Student Project"
+                          stack="HTML5, JavaScript, Bootstrap, SCSS"
+                          description={`The Auctio website was part of the Noroff Semester Project 2 exam; it allows users to search through an inventory of student-made items and bid on them. Users may also list their own items for sale.`}
+                          repoLink="https://github.com/StormSkoglund/Semester-Project-2"
+                          liveLink="https://auctio.netlify.app/"
+                          image="/assets/semproj2.png"
                         />
-                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
-                          <div>
-                            <div className="text-sm md:text-base lg:text-xl font-semibold">
-                              Auctio
-                            </div>
-                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
-                              Tech Stack:
-                            </div>
-                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
-                              HTML5, JavaScript, Bootstrap, SCSS.
-                            </div>
-                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
-                              The Auctio website was part of the Noroff Semester
-                              Project 2 exam; it allows users to search through
-                              an inventory of student-made items and bid on
-                              them. Users may also list their own items for
-                              sale.
-                            </p>
-                          </div>
-                          <div className="mt-3 space-y-2 pb-2">
-                            <a
-                              href="https://github.com/StormSkoglund/Semester-Project-2"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="Auctio GitHub Repo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                Visit GitHub Repository
-                              </p>
-                            </a>
-                            <a
-                              href="https://auctio.netlify.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="Auctio Live Demo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                View Live Demo
-                              </p>
-                            </a>
-                          </div>
-                        </div>
                       </Slide>
-                      <Slide
-                        index={1}
-                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
-                      >
-                        <img
-                          src="/assets/screen-buythat.png"
-                          alt="A screenshot from a online shop"
-                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
+                      <Slide index={1} className="h-full">
+                        <ProjectCard
+                          title="BuyThat"
+                          role="Course Assignment"
+                          stack="React, Vite, JavaScript, Tailwind"
+                          description={`The BuyThat website, developed for a Noroff assignment, lets users search for products from a REST API and simulate purchase.`}
+                          repoLink="https://github.com/StormSkoglund/frontend-frameworks-ca"
+                          liveLink="https://buythat.netlify.app/"
+                          image="/assets/screen-buythat.png"
                         />
-                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
-                          <div>
-                            <div className="text-sm md:text-base lg:text-xl font-semibold">
-                              BuyThat
-                            </div>
-                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
-                              Tech Stack:
-                            </div>
-                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
-                              React, Vite, JavaScript, Tailwind.
-                            </div>
-                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
-                              The BuyThat website, developed for a Noroff
-                              assignment, lets users search for products from a
-                              REST API and simulate purchase.
-                            </p>
-                          </div>
-                          <div className="mt-3 space-y-2 pb-2">
-                            <a
-                              href="https://github.com/StormSkoglund/frontend-frameworks-ca"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="BuyThat GitHub Repository"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                Visit GitHub Repository
-                              </p>
-                            </a>
-                            <a
-                              href="https://buythat.netlify.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="BuyThat Live Demo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                View Live Demo
-                              </p>
-                            </a>
-                          </div>
-                        </div>
                       </Slide>
-                      <Slide
-                        index={2}
-                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
-                      >
-                        <img
-                          src="/assets/holistay.png"
-                          alt="A screenshot from a hotel-booking website"
-                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
+                      <Slide index={2} className="h-full">
+                        <ProjectCard
+                          title="HoliStay"
+                          role="Final Exam Project"
+                          stack="React, Vite, TypeScript, Tailwind"
+                          description={`The HoliStay website, developed for the final Noroff exam, is a booking platform featuring a user-friendly interface for both customers and administrators. It allows users to easily search for and book a variety of available venues, while also enabling admins to rent out their own venues.`}
+                          repoLink="https://github.com/StormSkoglund/Project-Exam-2"
+                          liveLink="https://project-exam2.netlify.app/"
+                          image="/assets/holistay.png"
                         />
-                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
-                          <div>
-                            <div className="text-sm md:text-base lg:text-xl font-semibold">
-                              HoliStay
-                            </div>
-                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
-                              Tech Stack:
-                            </div>
-                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
-                              React, Vite, TypeScript, Tailwind.
-                            </div>
-                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
-                              The HoliStay website, developed for the final
-                              Noroff exam, is a booking platform featuring a
-                              user-friendly interface for both customers and
-                              administrators. It allows users to easily search
-                              for and book a variety of available venues, while
-                              also enabling admins to rent out their own venues.
-                            </p>
-                          </div>
-                          <div className="mt-3 space-y-2 pb-2">
-                            <a
-                              href="https://github.com/StormSkoglund/Project-Exam-2"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="HoliStay GitHub Repo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                Visit GitHub Repository
-                              </p>
-                            </a>
-                            <a
-                              href="https://project-exam2.netlify.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="HoliStay Live Demo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                View Live Demo
-                              </p>
-                            </a>
-                          </div>
-                        </div>
                       </Slide>
                     </Slider>
+                    <DotGroup className="flex justify-center mt-4 space-x-2" />
                     <ButtonBack className="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
                       <span>Back</span>
                     </ButtonBack>
@@ -357,12 +242,32 @@ const App: React.FC = () => {
                   </CarouselProvider>
                 </div>
               </div>
+
+            {/* Case Studies */}
+            <div className="w-full flex flex-col items-center mt-6">
+              <h2 className="text-2xl font-semibold text-customBlue mb-4">Case Studies</h2>
+              <div className="w-full px-4">
+                <CaseStudy
+                  title="Auctio — Marketplace UX improvements"
+                  problem={`Users struggled to find items and understand the bidding process; the UI mixed student inventory data with unclear affordances.`}
+                  process={`I audited the product flow, simplified search filters, and reworked item listing cards to highlight price, remaining time, and bidding CTA. Conducted rapid usability testing with 5 peers.`}
+                  solution={`Reduced cognitive load by simplifying listing metadata, added clear CTAs and inline help text. Result: clearer flow and fewer abandoned bids during test sessions.`}
+                  image="/assets/semproj2.png"
+                />
+
+                <CaseStudy
+                  title="HoliStay — Booking reliability"
+                  problem={`Admins found it hard to manage availability and customers reported confusing booking steps leading to cancellations.`}
+                  process={`Mapped admin/customer flows, introduced clearer form validation and progressive disclosure for complex options. Built small admin controls to preview availability.`}
+                  solution={`Cleaner booking flow with inline validation reduced failed bookings in manual QA; admin preview simplified availability management.`}
+                  image="/assets/holistay.png"
+                />
+              </div>
             </div>
           </div>
         </div>
         <Footer />
       </HelmetProvider>
-    </>
   );
 };
 

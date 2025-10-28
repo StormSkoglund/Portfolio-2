@@ -3,7 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: { customBlue: "#0c112d", customGold: "#b89f84" },
+      // Muted, professional palette (softer and more neutral)
+      colors: { customBlue: "#1f2a44", customGold: "#a58f75" },
       keyframes: {
         flicker: {
           "0%, 100%": { boxShadow: "4px 0px 3px #166534" },
