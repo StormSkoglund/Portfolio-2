@@ -2,9 +2,8 @@ import React, { useMemo, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 const ProjectCarousel: React.FC = () => {
-  const projects = useMemo(
-    () => {
-      const base = [
+  const projects = useMemo(() => {
+    const base = [
       {
         title: "Auctio",
         role: "Student Project",
@@ -34,20 +33,18 @@ const ProjectCarousel: React.FC = () => {
         liveLink: "https://project-exam2.netlify.app/",
         image: "/assets/holistay.png",
         demoVideo: "/assets/holistaydemo_.mp4",
-  },
-  ];
+      },
+    ];
 
-      // In the test environment, avoid attaching demoVideo URLs so child
-      // components don't run autoplay/IntersectionObserver logic which can
-      // cause async state updates during mount and trigger act() warnings.
-      if (process.env.NODE_ENV === "test") {
-        return base.map((p) => ({ ...p, demoVideo: undefined }));
-      }
+    // In the test environment, avoid attaching demoVideo URLs so child
+    // components don't run autoplay/IntersectionObserver logic which can
+    // cause async state updates during mount and trigger act() warnings.
+    if (process.env.NODE_ENV === "test") {
+      return base.map((p) => ({ ...p, demoVideo: undefined }));
+    }
 
-      return base;
-    },
-    []
-  );
+    return base;
+  }, []);
 
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -55,7 +52,9 @@ const ProjectCarousel: React.FC = () => {
   // Derive an aria-live message from the active index to avoid effect-driven
   // state updates during mount. Rendering the message directly prevents
   // setState calls in useEffect which can trigger React "act" warnings in tests.
-  const liveMessage = `Slide ${activeIndex + 1} of ${projects.length}: ${projects[activeIndex]?.title ?? ""}`;
+  const liveMessage = `Slide ${activeIndex + 1} of ${projects.length}: ${
+    projects[activeIndex]?.title ?? ""
+  }`;
 
   return (
     <div

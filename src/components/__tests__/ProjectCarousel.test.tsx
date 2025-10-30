@@ -40,8 +40,8 @@ describe("ProjectCarousel", () => {
       expect(screen.getByRole("status")).toBeInTheDocument();
     });
 
-  // Focus the carousel root (first child of the render container)
-  const root = container!.firstChild as HTMLElement;
+    // Focus the carousel root (first child of the render container)
+    const root = container!.firstChild as HTMLElement;
     root.focus();
 
     const dots = screen.getAllByRole("tab");
