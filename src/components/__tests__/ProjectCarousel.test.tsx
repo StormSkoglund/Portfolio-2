@@ -1,5 +1,4 @@
-import { render, screen } from "@testing-library/react";
-import { act } from "react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 import ProjectCarousel from "../ProjectCarousel";
@@ -9,13 +8,12 @@ describe("ProjectCarousel", () => {
   test("renders and responds to arrow key navigation", async () => {
     const user = userEvent.setup();
 
-    // Wrap render in act so initial effect-driven state updates are contained
-    await act(async () => {
-      render(<ProjectCarousel />);
-    });
+    render(<ProjectCarousel />);
 
-    // Wait for the aria-live status to populate (settles useEffect state updates)
-    await screen.findByRole("status");
+    // Wait for any async updates to settle (effects, observers, etc.)
+    await waitFor(() => {
+      expect(screen.getByRole("status")).toBeInTheDocument();
+    });
 
     // The carousel should render at least one project title button/dot (we assert that dot buttons exist)
     const dots = screen.getAllByRole("tab");
@@ -35,14 +33,12 @@ describe("ProjectCarousel", () => {
 
   test("responds to arrow keys when focused", async () => {
     const user = userEvent.setup();
-    let container: HTMLElement | null = null;
-    await act(async () => {
-      const result = render(<ProjectCarousel />);
-      container = result.container as HTMLElement;
-    });
+    const { container } = render(<ProjectCarousel />);
 
-    // Wait for any initial effect updates
-    await screen.findByRole("status");
+    // Wait for the component to stabilize before interacting
+    await waitFor(() => {
+      expect(screen.getByRole("status")).toBeInTheDocument();
+    });
 
   // Focus the carousel root (first child of the render container)
   const root = container!.firstChild as HTMLElement;
