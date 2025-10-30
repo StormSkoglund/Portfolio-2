@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -13,7 +14,10 @@ export default {
           "70%": { boxShadow: "0px 4px 20px #166400" },
         },
       },
-      animation: { flicker: "flicker 6s infinite alternate" },
+      animation: {
+        flicker: "flicker 6s infinite alternate",
+        "bounce-once": "bounce 1s ease-in-out 1",
+      },
     },
   },
   plugins: [],
