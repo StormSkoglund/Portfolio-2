@@ -10,8 +10,8 @@
   command = "npm run build"
 
 [build.environment]
-  # Explicitly request Node 20 on the build image (Noble supports 20.x)
-  NODE_VERSION = "20"
+  # Request Node 24 on the build image (Noble supports 24.x LTS)
+  NODE_VERSION = "24"
 
 # Optional: add headers, redirects or other Netlify settings below
 
