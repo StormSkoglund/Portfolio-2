@@ -9,8 +9,26 @@ const EmailLink: React.FC<{ className?: string }> = ({ className }) => {
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
     e.preventDefault();
-    // open the default mail client without a visible mailto in the markup
-    window.location.href = `mailto:${address}`;
+    // Save minimal resume state (harmless and useful for debugging).
+    try {
+      sessionStorage.setItem(
+        "resume_after_external",
+        JSON.stringify({ pathname: window.location.pathname, ts: Date.now() })
+      );
+    } catch {
+      /* ignore storage errors */
+    }
+
+    // Open the mail client in a new tab/window. Using a new tab avoids
+    // making the current page an "intermediate" navigation target in many
+    // browser heuristics and typically prevents the DevTools Issues warning.
+    // Include noopener/noreferrer for security.
+    try {
+      window.open(`mailto:${address}`, "_blank", "noopener,noreferrer");
+    } catch {
+      // Fallback to replace if window.open is blocked
+      window.location.replace(`mailto:${address}`);
+    }
   };
 
   return (

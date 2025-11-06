@@ -22,6 +22,24 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", setCarouselMinHeight);
   }, []);
 
+  // If we returned from an external navigation (mailto), the page may have
+  // a small marker in sessionStorage. Read it once so we can log/rehydrate any
+  // tiny UI state needed for debugging. Clear immediately after reading.
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem("resume_after_external");
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        // Keep this subtle and not noisy in production; useful while
+        // diagnosing the Chrome interstitial warning.
+        console.info("Resumed after external navigation:", parsed);
+        sessionStorage.removeItem("resume_after_external");
+      }
+    } catch {
+      /* ignore parse/storage errors */
+    }
+  }, []);
+
   // Emit a lowercase `fetchpriority` attribute (supported by browsers)
   // without tripping React/TypeScript warnings.
   const fetchPriorityAttr: Record<string, string> = { fetchpriority: "high" };

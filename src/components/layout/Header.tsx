@@ -65,9 +65,35 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-4">
           <button
             onClick={() => {
+              // Persist a tiny bit of state before leaving the page so that
+              // browsers which treat the navigation as transient don't drop
+              // our UI state. Use replace() to avoid creating an intermediate
+              // history entry.
+              try {
+                sessionStorage.setItem(
+                  "resume_after_external",
+                  JSON.stringify({
+                    pathname: window.location.pathname,
+                    ts: Date.now(),
+                  })
+                );
+              } catch {
+                /* ignore storage errors */
+              }
+
               const user = "skogdev";
               const domain = "protonmail.com";
-              window.location.href = `mailto:${user}@${domain}`;
+              // Open in a new tab to avoid creating an intermediate navigation
+              // entry for the current page. Use noopener/noreferrer for safety.
+              try {
+                window.open(
+                  `mailto:${user}@${domain}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              } catch {
+                window.location.replace(`mailto:${user}@${domain}`);
+              }
             }}
             aria-label="Hire me — email Alex"
             className="inline-block px-3 py-1 bg-customGold text-customBlue rounded-md hover:opacity-90 hire-btn"
