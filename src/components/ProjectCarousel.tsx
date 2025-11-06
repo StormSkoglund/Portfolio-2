@@ -36,9 +36,8 @@ const ProjectCarousel: React.FC = () => {
       },
     ];
 
-    // In the test environment, avoid attaching demoVideo URLs so child
-    // components don't run autoplay/IntersectionObserver logic which can
-    // cause async state updates during mount and trigger act() warnings.
+    // In tests we disable demo videos to avoid autoplay/IntersectionObserver
+    // behavior that can cause React test warnings.
     if (process.env.NODE_ENV === "test") {
       return base.map((p) => ({ ...p, demoVideo: undefined }));
     }
@@ -49,9 +48,7 @@ const ProjectCarousel: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // Derive an aria-live message from the active index to avoid effect-driven
-  // state updates during mount. Rendering the message directly prevents
-  // setState calls in useEffect which can trigger React "act" warnings in tests.
+  // Render an aria-live message for screen readers describing the active slide.
   const liveMessage = `Slide ${activeIndex + 1} of ${projects.length}: ${
     projects[activeIndex]?.title ?? ""
   }`;
@@ -75,7 +72,7 @@ const ProjectCarousel: React.FC = () => {
           e.preventDefault();
         }
       }}
-      className="outline-none"
+      className="outline-none min-h-[320px] md:min-h-[420px]"
     >
       <div className="h-full">
         <ProjectCard {...projects[activeIndex]} />
@@ -101,22 +98,24 @@ const ProjectCarousel: React.FC = () => {
           Back
         </button>
 
-        <div
-          className="flex gap-2 items-center"
-          role="tablist"
-          aria-label="Project slides"
-        >
+        <div className="flex gap-2 items-center" aria-label="Project slides">
           {projects.map((_, i) => (
             <button
               key={i}
               onClick={() => setActiveIndex(i)}
               aria-label={`Go to slide ${i + 1}`}
               aria-pressed={i === activeIndex}
-              role="tab"
-              className={`w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 ${
-                i === activeIndex ? "bg-gray-800" : "bg-gray-300"
+              className={`p-2 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 ${
+                i === activeIndex ? "bg-gray-800" : "bg-transparent"
               }`}
+              title={`Slide ${i + 1}`}
             >
+              <span
+                aria-hidden
+                className={`block w-3 h-3 rounded-full ${
+                  i === activeIndex ? "bg-white" : "bg-gray-300"
+                }`}
+              />
               <span className="sr-only">{`Slide ${i + 1} ${
                 i === activeIndex ? "(current)" : ""
               }`}</span>
@@ -154,7 +153,7 @@ const ProjectCarousel: React.FC = () => {
           href={projects[activeIndex].liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full md:w-auto text-center inline-block px-3 py-2 bg-customGold text-white rounded-md text-sm md:text-base hover:opacity-95 shadow-md transition"
+          className="w-full md:w-auto text-center inline-block px-3 py-2 bg-customGold text-customBlue rounded-md text-sm md:text-base hover:opacity-95 shadow-md transition"
         >
           View Live Demo
         </a>

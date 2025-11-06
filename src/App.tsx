@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import ProjectCarousel from "./components/ProjectCarousel";
+const ProjectCarousel = React.lazy(
+  () => import("./components/ProjectCarousel")
+);
 import { TechStack } from "./components/tech/TechStack";
 import EmailLink from "./components/EmailLink";
-
-// replaced pure-react-carousel with a lightweight custom slider for project cards
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -22,13 +22,17 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", setCarouselMinHeight);
   }, []);
 
+  // Emit a lowercase `fetchpriority` attribute (supported by browsers)
+  // without tripping React/TypeScript warnings.
+  const fetchPriorityAttr: Record<string, string> = { fetchpriority: "high" };
+
   return (
     <HelmetProvider>
       <Helmet>
         <title>Alex Storm Skoglund — Frontend Portfolio</title>
         <meta
           name="description"
-          content="Frontend portfolio showcasing projects and case studies."
+          content="Frontend portfolio showcasing projects and current tech stack."
         />
       </Helmet>
 
@@ -52,24 +56,42 @@ const App: React.FC = () => {
             <div className="flex flex-col lg:flex-row gap-6 items-start">
               <div className="w-full lg:w-2/5">
                 <div className="bg-gray-100 rounded-lg overflow-hidden h-full flex items-center">
-                  <img
-                    src="/assets/mudman.jpg"
-                    alt="Archaeological dig: mudman"
-                    className="w-full h-full object-cover"
-                  />
+                  <picture>
+                    <source srcSet="/assets/mudman.avif" type="image/avif" />
+                    <source srcSet="/assets/mudman.webp" type="image/webp" />
+                    <img
+                      src="/assets/mudman.jpg"
+                      alt="Archaeological dig: mudman"
+                      className="w-full h-full object-cover"
+                      width={1200}
+                      height={800}
+                      loading="eager"
+                      decoding="async"
+                      {...fetchPriorityAttr}
+                    />
+                  </picture>
                 </div>
               </div>
 
               {/* Right: custom slider for ProjectCard (renders links outside slide to avoid nested-interactive) */}
               <div className="w-full lg:w-3/5">
                 <div className="bg-white/90 rounded-2xl p-4 shadow-lg h-full">
-                  {/* Project data */}
-                  <ProjectCarousel />
+                  {/* Project carousel (loaded lazily) */}
+                  <React.Suspense
+                    fallback={
+                      <div id="carousel" className="w-full h-80 md:h-96">
+                        {/* simple skeleton to avoid layout shift while loading */}
+                        <div className="w-full h-full bg-gray-100 rounded-lg animate-pulse" />
+                      </div>
+                    }
+                  >
+                    <ProjectCarousel />
+                  </React.Suspense>
                 </div>
-                <p className="max-w-2xl text-gray-700 dark:text-gray-200 mt-10">
+                <p className="max-w-2xl text-gray-700 dark:text-gray-200 mt-10 p-2">
                   I'm available for freelance and full-time opportunities —
                   let's talk:
-                  <EmailLink className="ml-2 text-customBlue dark:text-gray-200 border-spacing-10 px-3 py-2 bg-customGold rounded-md" />
+                  <EmailLink className="ml-2 text-customBlue dark:text-gray-200 border-spacing-10 px-3 py-1 bg-customGold rounded-md" />
                 </p>
               </div>
             </div>

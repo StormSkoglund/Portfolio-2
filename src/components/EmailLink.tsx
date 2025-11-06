@@ -1,8 +1,7 @@
 import React from "react";
 
-// Renders an obfuscated email address visually and opens a mailto: when activated.
-// This keeps the plaintext email out of the static HTML while remaining keyboard/
-// screen-reader accessible via aria-label.
+// Render an obfuscated email and open the user's mail client on click.
+// The address is kept out of static HTML but still usable by assistive tech via aria-label.
 const EmailLink: React.FC<{ className?: string }> = ({ className }) => {
   const user = "skogdev";
   const domain = "protonmail.com";
@@ -10,7 +9,7 @@ const EmailLink: React.FC<{ className?: string }> = ({ className }) => {
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
     e.preventDefault();
-    // build mailto and navigate — this avoids a static href in markup
+    // open the default mail client without a visible mailto in the markup
     window.location.href = `mailto:${address}`;
   };
 
@@ -19,10 +18,10 @@ const EmailLink: React.FC<{ className?: string }> = ({ className }) => {
       href="#"
       onClick={handleClick}
       className={className}
-      // keep the visible text short to avoid scraping; provide a helpful aria-label
+      // short visible label to reduce scraping while remaining accessible
       aria-label={`Email Alex (opens mail client)`}
     >
-      Email me
+      {"Email\u00A0me"}
     </a>
   );
 };

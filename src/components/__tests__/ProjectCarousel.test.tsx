@@ -15,8 +15,8 @@ describe("ProjectCarousel", () => {
       expect(screen.getByRole("status")).toBeInTheDocument();
     });
 
-    // The carousel should render at least one project title button/dot (we assert that dot buttons exist)
-    const dots = screen.getAllByRole("tab");
+    // The carousel should render at least one project dot control (we assert that dot buttons exist)
+    const dots = screen.getAllByLabelText(/Go to slide/i);
     expect(dots.length).toBeGreaterThanOrEqual(1);
 
     // If a tablist exists, click the next dot to ensure active state changes
@@ -44,7 +44,7 @@ describe("ProjectCarousel", () => {
     const root = container!.firstChild as HTMLElement;
     root.focus();
 
-    const dots = screen.getAllByRole("tab");
+    const dots = screen.getAllByLabelText(/Go to slide/i);
     expect(dots.length).toBeGreaterThanOrEqual(2);
 
     // Press ArrowRight to move to the next slide

@@ -1,5 +1,4 @@
 import React from "react";
-import { FaPlay, FaPause } from "react-icons/fa";
 
 interface ProjectCardProps {
   title: string;
@@ -8,7 +7,7 @@ interface ProjectCardProps {
   description: string;
   repoLink?: string;
   liveLink?: string;
-  demoVideo?: string; // optional URL to an mp4/webm demo hosted in /public or external
+  demoVideo?: string; // optional URL to an mp4 demo hosted in /public or external
   image?: string;
 }
 
@@ -28,18 +27,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const [showControls, setShowControls] = React.useState(true);
   const ref = React.useRef<HTMLElement | null>(null);
   const videoRef = React.useRef<HTMLVideoElement | null>(null);
+  const [preferMobileVideo, setPreferMobileVideo] = React.useState(false);
 
-  // Autoplay video when card is sufficiently visible
+  // Autoplay the demo when the card is mostly visible
   React.useEffect(() => {
     if (!demoVideo) return;
     const node = ref.current;
-    // If the element ref isn't yet attached, don't trigger a state update here —
-    // that can cause React "act" warnings in tests. Only proceed once the
-    // DOM node exists.
+    // If the ref isn't attached yet, wait — updating state too early can
+    // trigger React test warnings.
     if (!node) return;
 
-    // If the runtime doesn't support IntersectionObserver, fall back to
-    // enabling playback so demos still play in older browsers.
+    // If IntersectionObserver isn't available, just enable playback so demos work.
     if (typeof IntersectionObserver === "undefined") {
       setIsPlaying(true);
       return;
@@ -62,6 +60,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     return () => obs.disconnect();
   }, [demoVideo]);
 
+  // Prefer a smaller mobile video variant when the viewport is narrow
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const mq = window.matchMedia?.("(max-width: 640px)");
+      if (mq) {
+        setPreferMobileVideo(mq.matches);
+        const handler = (e: MediaQueryListEvent) =>
+          setPreferMobileVideo(e.matches);
+        // modern API only: keep logic simple and avoid legacy addListener/removeListener
+        if (mq.addEventListener) mq.addEventListener("change", handler);
+        return () => {
+          if (mq.removeEventListener)
+            mq.removeEventListener("change", handler as EventListener);
+        };
+      }
+    } catch {
+      // ignore errors (e.g. SSR or blocked APIs)
+    }
+  }, []);
+
+  // Try a `-mobile` filename variant if present (e.g. demo-mobile.mp4)
+  const mobileVariant = demoVideo
+    ? demoVideo.replace(/(\.[^.]+)$/, "-mobile$1")
+    : undefined;
+
   return (
     <article
       ref={(el) => (ref.current = el)}
@@ -82,12 +106,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           <video
             ref={videoRef}
-            src={demoVideo}
+            // Only set `src` when playing to avoid downloading large files early.
+            // Prefer the mobile variant when appropriate.
+            src={
+              isPlaying
+                ? preferMobileVideo && mobileVariant
+                  ? mobileVariant
+                  : demoVideo
+                : undefined
+            }
             className="w-full h-auto object-contain bg-black"
             controls={showControls}
-            autoPlay
+            autoPlay={isPlaying}
             muted
+            loop
             playsInline
+            preload="metadata"
+            poster={
+              image ? image.replace(/\.(png|jpe?g)$/i, ".avif") : undefined
+            }
+            // Add a captions track (browser ignores it if the .vtt file is missing).
             onClick={() => {
               const v = videoRef.current;
               if (!v) return;
@@ -105,10 +143,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 setAspectRatio(`${v.videoWidth}/${v.videoHeight}`);
               }
             }}
-            onEnded={() => setIsPlaying(false)}
-          />
+            // keep looping instead of switching to the poster image when playback ends
+          >
+            {/* Explicit <source> elements; the `src` above decides which file is used when playing. */}
+            {mobileVariant && <source src={mobileVariant} type="video/mp4" />}
+            {demoVideo && <source src={demoVideo} type="video/mp4" />}
+            {/* Prefer a same-name captions file (demo.vtt); helpful for accessibility audits. */}
+            {demoVideo && (
+              <track
+                kind="captions"
+                srcLang="en"
+                label="English captions"
+                src={demoVideo.replace(/\.[^.]+$/, ".vtt")}
+                default
+              />
+            )}
+          </video>
 
-          {/* Accessible overlay control: visible on hover (group) or when focused (focus-within) */}
+          {/* Overlay control shown on hover/focus for play/pause */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity pointer-events-auto">
               <button
@@ -130,7 +182,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 aria-label={isPlaying ? "Pause demo" : "Play demo"}
               >
                 <span className="text-lg">
-                  {isPlaying ? <FaPause /> : <FaPlay />}
+                  {isPlaying ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      height="18"
+                      aria-hidden
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      height="18"
+                      aria-hidden
+                    >
+                      <path fill="currentColor" d="M8 5v14l11-7z" />
+                    </svg>
+                  )}
                 </span>
                 <span className="sr-only md:not-sr-only">
                   {isPlaying ? "Pause" : "Play"}
@@ -141,17 +216,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       ) : (
         image && (
-          <img
-            src={image}
-            alt={`${title} screenshot`}
-            className="w-full rounded-lg object-contain shadow-sm"
-            style={
-              {
-                aspectRatio: aspectRatio || "16/9",
-                maxHeight: "640px",
-              } as React.CSSProperties
-            }
-          />
+          <picture>
+            {/* Prefer AVIF then WebP if available (generated by optimize script) */}
+            <source
+              srcSet={image.replace(/\.(png|jpe?g)$/i, ".avif")}
+              type="image/avif"
+            />
+            <source
+              srcSet={image.replace(/\.(png|jpe?g)$/i, ".webp")}
+              type="image/webp"
+            />
+            <img
+              src={image}
+              alt={`${title} screenshot`}
+              loading="lazy"
+              className="w-full rounded-lg object-contain shadow-sm"
+              style={
+                {
+                  aspectRatio: aspectRatio || "16/9",
+                  maxHeight: "640px",
+                } as React.CSSProperties
+              }
+            />
+          </picture>
         )
       )}
 
@@ -165,18 +252,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               {title}
             </div>
           )}
-          <div className="text-xs md:text-sm text-gray-600 mt-1">
+          <div className="text-xs md:text-sm text-gray-700 dark:text-white mt-1 mb-5">
             {role && <span className="mr-2">{role}</span>}
-            <span className="text-gray-500">{stack}</span>
+            <span className="text-gray-700 dark:text-white border-solid border p-2">
+              {stack}
+            </span>
           </div>
 
-          <p className="mt-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+          <p className="mt-2 text-sm md:text-base text-gray-900 dark:text-gray-200">
             {description}
           </p>
         </div>
 
-        {/* Action links are intentionally rendered outside the card in the parent slider
-            to avoid interactive elements being nested inside role-bearing carousel slides. */}
+        {/* Action links are rendered in the parent carousel to avoid nested interactive elements. */}
       </div>
     </article>
   );

@@ -22,10 +22,7 @@
     {
       "id": "accesskeys",
       "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
+      "tags": ["cat.keyboard", "best-practice"],
       "description": "Ensures every accesskey attribute value is unique",
       "help": "accesskey attribute value should be unique",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/accesskeys?application=axeAPI",
@@ -56,13 +53,7 @@
     {
       "id": "aria-braille-equivalent",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
       "help": "aria-braille attributes must have a non-braille equivalent",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-braille-equivalent?application=axeAPI",
@@ -89,10 +80,7 @@
     {
       "id": "aria-dialog-name",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice"
-      ],
+      "tags": ["cat.aria", "best-practice"],
       "description": "Ensures every ARIA dialog and alertdialog node has an accessible name",
       "help": "ARIA dialog and alertdialog nodes should have an accessible name",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-dialog-name?application=axeAPI",
@@ -136,13 +124,7 @@
     {
       "id": "aria-meter-name",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag111",
-        "EN-301-549",
-        "EN-9.1.1.1"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag111", "EN-301-549", "EN-9.1.1.1"],
       "description": "Ensures every ARIA meter node has an accessible name",
       "help": "ARIA meter nodes must have an accessible name",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-meter-name?application=axeAPI",
@@ -151,13 +133,7 @@
     {
       "id": "aria-progressbar-name",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag111",
-        "EN-301-549",
-        "EN-9.1.1.1"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag111", "EN-301-549", "EN-9.1.1.1"],
       "description": "Ensures every ARIA progressbar node has an accessible name",
       "help": "ARIA progressbar nodes must have an accessible name",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-progressbar-name?application=axeAPI",
@@ -166,10 +142,7 @@
     {
       "id": "aria-text",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice"
-      ],
+      "tags": ["cat.aria", "best-practice"],
       "description": "Ensures role=\"text\" is used on elements with no focusable descendants",
       "help": "\"role=text\" should have no focusable descendants",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-text?application=axeAPI",
@@ -196,13 +169,7 @@
     {
       "id": "aria-tooltip-name",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures every ARIA tooltip node has an accessible name",
       "help": "ARIA tooltip nodes must have an accessible name",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-tooltip-name?application=axeAPI",
@@ -211,10 +178,7 @@
     {
       "id": "aria-treeitem-name",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice"
-      ],
+      "tags": ["cat.aria", "best-practice"],
       "description": "Ensures every ARIA treeitem node has an accessible name",
       "help": "ARIA treeitem nodes should have an accessible name",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-treeitem-name?application=axeAPI",
@@ -288,13 +252,7 @@
     {
       "id": "duplicate-id-aria",
       "impact": null,
-      "tags": [
-        "cat.parsing",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.parsing", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures every id attribute value used in ARIA and in labels is unique",
       "help": "IDs used in ARIA and labels must be unique",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/duplicate-id-aria?application=axeAPI",
@@ -303,10 +261,7 @@
     {
       "id": "empty-table-header",
       "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "best-practice"
-      ],
+      "tags": ["cat.name-role-value", "best-practice"],
       "description": "Ensures table headers have discernible text",
       "help": "Table header text should not be empty",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/empty-table-header?application=axeAPI",
@@ -349,11 +304,7 @@
     {
       "id": "frame-tested",
       "impact": null,
-      "tags": [
-        "cat.structure",
-        "best-practice",
-        "review-item"
-      ],
+      "tags": ["cat.structure", "best-practice", "review-item"],
       "description": "Ensures <iframe> and <frame> elements contain the axe-core script",
       "help": "Frames should be tested with axe-core",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/frame-tested?application=axeAPI",
@@ -456,10 +407,7 @@
     {
       "id": "label-title-only",
       "impact": null,
-      "tags": [
-        "cat.forms",
-        "best-practice"
-      ],
+      "tags": ["cat.forms", "best-practice"],
       "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
       "help": "Form elements should have a visible label",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/label-title-only?application=axeAPI",
@@ -488,10 +436,7 @@
     {
       "id": "landmark-complementary-is-top-level",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the complementary landmark or aside is at top level",
       "help": "Aside should not be contained in another landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-complementary-is-top-level?application=axeAPI",
@@ -568,11 +513,7 @@
     {
       "id": "presentation-role-conflict",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice",
-        "ACT"
-      ],
+      "tags": ["cat.aria", "best-practice", "ACT"],
       "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
       "help": "Ensure elements marked as presentational are consistently ignored",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/presentation-role-conflict?application=axeAPI",
@@ -601,10 +542,7 @@
     {
       "id": "scope-attr-valid",
       "impact": null,
-      "tags": [
-        "cat.tables",
-        "best-practice"
-      ],
+      "tags": ["cat.tables", "best-practice"],
       "description": "Ensures the scope attribute is used correctly on tables",
       "help": "scope attribute should be used correctly",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/scope-attr-valid?application=axeAPI",
@@ -689,10 +627,7 @@
     {
       "id": "table-duplicate-name",
       "impact": null,
-      "tags": [
-        "cat.tables",
-        "best-practice"
-      ],
+      "tags": ["cat.tables", "best-practice"],
       "description": "Ensure the <caption> element does not contain the same text as the summary attribute",
       "help": "tables should not have the same summary and caption",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/table-duplicate-name?application=axeAPI",
@@ -796,13 +731,7 @@
     {
       "id": "aria-allowed-attr",
       "impact": "critical",
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures an element's role supports its ARIA attributes",
       "help": "Elements must only use supported ARIA attributes",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-allowed-attr?application=axeAPI",
@@ -829,9 +758,7 @@
           ],
           "impact": null,
           "html": "<button class=\"focus:outline-none\" aria-label=\"Toggle menu\">",
-          "target": [
-            "button[aria-label=\"Toggle menu\"]"
-          ]
+          "target": ["button[aria-label=\"Toggle menu\"]"]
         },
         {
           "any": [],
@@ -855,9 +782,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Toggle theme\" class=\"text-current bg-gray-100 dark:bg-transparent p-2 rounded\">",
-          "target": [
-            ".dark\\:bg-transparent"
-          ]
+          "target": [".dark\\:bg-transparent"]
         },
         {
           "any": [],
@@ -881,9 +806,7 @@
           ],
           "impact": null,
           "html": "<a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a>",
-          "target": [
-            "a[href$=\"#work\"]"
-          ]
+          "target": ["a[href$=\"#work\"]"]
         },
         {
           "any": [],
@@ -907,9 +830,7 @@
           ],
           "impact": null,
           "html": "<a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a>",
-          "target": [
-            "a[href$=\"#contact\"]"
-          ]
+          "target": ["a[href$=\"#contact\"]"]
         },
         {
           "any": [],
@@ -933,9 +854,7 @@
           ],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [],
@@ -959,9 +878,7 @@
           ],
           "impact": null,
           "html": "<button disabled=\"\" class=\"mr-3 px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"true\" aria-label=\"Previous: none\">Back</button>",
-          "target": [
-            ".mr-3"
-          ]
+          "target": [".mr-3"]
         },
         {
           "any": [],
@@ -985,9 +902,7 @@
           ],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [],
@@ -1011,9 +926,7 @@
           ],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         },
         {
           "any": [],
@@ -1037,9 +950,7 @@
           ],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub\">",
-          "target": [
-            "a[aria-label=\"GitHub\"]"
-          ]
+          "target": ["a[aria-label=\"GitHub\"]"]
         },
         {
           "any": [],
@@ -1063,9 +974,7 @@
           ],
           "impact": null,
           "html": "<a id=\"contact\" href=\"https://www.linkedin.com/in/alex-storm-skoglund-13764372/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"LinkedIn\">",
-          "target": [
-            "#contact"
-          ]
+          "target": ["#contact"]
         },
         {
           "any": [],
@@ -1089,19 +998,14 @@
           ],
           "impact": null,
           "html": "<a href=\"https://www.instagram.com/skoglunddev/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Instagram\">",
-          "target": [
-            "a[aria-label=\"Instagram\"]"
-          ]
+          "target": ["a[aria-label=\"Instagram\"]"]
         }
       ]
     },
     {
       "id": "aria-allowed-role",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice"
-      ],
+      "tags": ["cat.aria", "best-practice"],
       "description": "Ensures role attribute has an appropriate value for the element",
       "help": "ARIA role should be appropriate for the element",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-allowed-role?application=axeAPI",
@@ -1120,9 +1024,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [
@@ -1138,9 +1040,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [
@@ -1156,9 +1056,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [
@@ -1174,9 +1072,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [
@@ -1192,22 +1088,14 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         }
       ]
     },
     {
       "id": "aria-conditional-attr",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures ARIA attributes are used as described in the specification of the element's role",
       "help": "ARIA attributes must be used as specified for the element's role",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-conditional-attr?application=axeAPI",
@@ -1226,9 +1114,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"focus:outline-none\" aria-label=\"Toggle menu\">",
-          "target": [
-            "button[aria-label=\"Toggle menu\"]"
-          ]
+          "target": ["button[aria-label=\"Toggle menu\"]"]
         },
         {
           "any": [],
@@ -1244,9 +1130,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Toggle theme\" class=\"text-current bg-gray-100 dark:bg-transparent p-2 rounded\">",
-          "target": [
-            ".dark\\:bg-transparent"
-          ]
+          "target": [".dark\\:bg-transparent"]
         },
         {
           "any": [],
@@ -1262,9 +1146,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a>",
-          "target": [
-            "a[href$=\"#work\"]"
-          ]
+          "target": ["a[href$=\"#work\"]"]
         },
         {
           "any": [],
@@ -1280,9 +1162,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a>",
-          "target": [
-            "a[href$=\"#contact\"]"
-          ]
+          "target": ["a[href$=\"#contact\"]"]
         },
         {
           "any": [],
@@ -1298,9 +1178,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [],
@@ -1316,9 +1194,7 @@
           "none": [],
           "impact": null,
           "html": "<button disabled=\"\" class=\"mr-3 px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"true\" aria-label=\"Previous: none\">Back</button>",
-          "target": [
-            ".mr-3"
-          ]
+          "target": [".mr-3"]
         },
         {
           "any": [],
@@ -1334,9 +1210,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [],
@@ -1352,9 +1226,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [],
@@ -1370,9 +1242,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [],
@@ -1388,9 +1258,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         },
         {
           "any": [],
@@ -1406,9 +1274,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         },
         {
           "any": [],
@@ -1424,9 +1290,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub\">",
-          "target": [
-            "a[aria-label=\"GitHub\"]"
-          ]
+          "target": ["a[aria-label=\"GitHub\"]"]
         },
         {
           "any": [],
@@ -1442,9 +1306,7 @@
           "none": [],
           "impact": null,
           "html": "<a id=\"contact\" href=\"https://www.linkedin.com/in/alex-storm-skoglund-13764372/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"LinkedIn\">",
-          "target": [
-            "#contact"
-          ]
+          "target": ["#contact"]
         },
         {
           "any": [],
@@ -1460,22 +1322,14 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://www.instagram.com/skoglunddev/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Instagram\">",
-          "target": [
-            "a[aria-label=\"Instagram\"]"
-          ]
+          "target": ["a[aria-label=\"Instagram\"]"]
         }
       ]
     },
     {
       "id": "aria-deprecated-role",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures elements do not use deprecated roles",
       "help": "Deprecated ARIA roles must not be used",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-deprecated-role?application=axeAPI",
@@ -1494,9 +1348,7 @@
           ],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [],
@@ -1512,9 +1364,7 @@
           ],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [],
@@ -1530,9 +1380,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [],
@@ -1548,9 +1396,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [],
@@ -1566,22 +1412,14 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         }
       ]
     },
     {
       "id": "aria-hidden-body",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures aria-hidden=\"true\" is not present on the document body.",
       "help": "aria-hidden=\"true\" must not be present on the document body",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-hidden-body?application=axeAPI",
@@ -1600,22 +1438,14 @@
           "none": [],
           "impact": null,
           "html": "<body>",
-          "target": [
-            "body"
-          ]
+          "target": ["body"]
         }
       ]
     },
     {
       "id": "aria-prohibited-attr",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures ARIA attributes are not prohibited for an element's role",
       "help": "Elements must only use permitted ARIA attributes",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-prohibited-attr?application=axeAPI",
@@ -1634,9 +1464,7 @@
           ],
           "impact": null,
           "html": "<button class=\"focus:outline-none\" aria-label=\"Toggle menu\">",
-          "target": [
-            "button[aria-label=\"Toggle menu\"]"
-          ]
+          "target": ["button[aria-label=\"Toggle menu\"]"]
         },
         {
           "any": [],
@@ -1652,9 +1480,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Toggle theme\" class=\"text-current bg-gray-100 dark:bg-transparent p-2 rounded\">",
-          "target": [
-            ".dark\\:bg-transparent"
-          ]
+          "target": [".dark\\:bg-transparent"]
         },
         {
           "any": [],
@@ -1670,9 +1496,7 @@
           ],
           "impact": null,
           "html": "<a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a>",
-          "target": [
-            "a[href$=\"#work\"]"
-          ]
+          "target": ["a[href$=\"#work\"]"]
         },
         {
           "any": [],
@@ -1688,9 +1512,7 @@
           ],
           "impact": null,
           "html": "<a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a>",
-          "target": [
-            "a[href$=\"#contact\"]"
-          ]
+          "target": ["a[href$=\"#contact\"]"]
         },
         {
           "any": [],
@@ -1706,9 +1528,7 @@
           ],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [],
@@ -1724,9 +1544,7 @@
           ],
           "impact": null,
           "html": "<button disabled=\"\" class=\"mr-3 px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"true\" aria-label=\"Previous: none\">Back</button>",
-          "target": [
-            ".mr-3"
-          ]
+          "target": [".mr-3"]
         },
         {
           "any": [],
@@ -1742,9 +1560,7 @@
           ],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [],
@@ -1760,9 +1576,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [],
@@ -1778,9 +1592,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [],
@@ -1796,9 +1608,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         },
         {
           "any": [],
@@ -1814,9 +1624,7 @@
           ],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         },
         {
           "any": [],
@@ -1832,9 +1640,7 @@
           ],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub\">",
-          "target": [
-            "a[aria-label=\"GitHub\"]"
-          ]
+          "target": ["a[aria-label=\"GitHub\"]"]
         },
         {
           "any": [],
@@ -1850,9 +1656,7 @@
           ],
           "impact": null,
           "html": "<a id=\"contact\" href=\"https://www.linkedin.com/in/alex-storm-skoglund-13764372/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"LinkedIn\">",
-          "target": [
-            "#contact"
-          ]
+          "target": ["#contact"]
         },
         {
           "any": [],
@@ -1868,22 +1672,14 @@
           ],
           "impact": null,
           "html": "<a href=\"https://www.instagram.com/skoglunddev/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Instagram\">",
-          "target": [
-            "a[aria-label=\"Instagram\"]"
-          ]
+          "target": ["a[aria-label=\"Instagram\"]"]
         }
       ]
     },
     {
       "id": "aria-required-attr",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures elements with ARIA roles have all required ARIA attributes",
       "help": "Required ARIA attributes must be provided",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-required-attr?application=axeAPI",
@@ -1902,9 +1698,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [
@@ -1920,9 +1714,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [
@@ -1938,9 +1730,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [
@@ -1956,9 +1746,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [
@@ -1974,22 +1762,14 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         }
       ]
     },
     {
       "id": "aria-required-children",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag131", "EN-301-549", "EN-9.1.3.1"],
       "description": "Ensures elements with an ARIA role that require child roles contain them",
       "help": "Certain ARIA roles must contain particular children",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-required-children?application=axeAPI",
@@ -2008,22 +1788,14 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         }
       ]
     },
     {
       "id": "aria-required-parent",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag131", "EN-301-549", "EN-9.1.3.1"],
       "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
       "help": "Certain ARIA roles must be contained by particular parents",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-required-parent?application=axeAPI",
@@ -2042,9 +1814,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [
@@ -2060,9 +1830,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [
@@ -2078,22 +1846,14 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         }
       ]
     },
     {
       "id": "aria-roles",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures all elements with a role attribute use a valid value",
       "help": "ARIA roles used must conform to valid values",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-roles?application=axeAPI",
@@ -2126,9 +1886,7 @@
           ],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [],
@@ -2158,9 +1916,7 @@
           ],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [],
@@ -2190,9 +1946,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [],
@@ -2222,9 +1976,7 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [],
@@ -2254,22 +2006,14 @@
           ],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         }
       ]
     },
     {
       "id": "aria-valid-attr-value",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures all ARIA attributes have valid values",
       "help": "ARIA attributes must conform to valid values",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-valid-attr-value?application=axeAPI",
@@ -2302,9 +2046,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"focus:outline-none\" aria-label=\"Toggle menu\">",
-          "target": [
-            "button[aria-label=\"Toggle menu\"]"
-          ]
+          "target": ["button[aria-label=\"Toggle menu\"]"]
         },
         {
           "any": [],
@@ -2334,9 +2076,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Toggle theme\" class=\"text-current bg-gray-100 dark:bg-transparent p-2 rounded\">",
-          "target": [
-            ".dark\\:bg-transparent"
-          ]
+          "target": [".dark\\:bg-transparent"]
         },
         {
           "any": [],
@@ -2366,9 +2106,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a>",
-          "target": [
-            "a[href$=\"#work\"]"
-          ]
+          "target": ["a[href$=\"#work\"]"]
         },
         {
           "any": [],
@@ -2398,9 +2136,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a>",
-          "target": [
-            "a[href$=\"#contact\"]"
-          ]
+          "target": ["a[href$=\"#contact\"]"]
         },
         {
           "any": [],
@@ -2430,9 +2166,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [],
@@ -2462,9 +2196,7 @@
           "none": [],
           "impact": null,
           "html": "<button disabled=\"\" class=\"mr-3 px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"true\" aria-label=\"Previous: none\">Back</button>",
-          "target": [
-            ".mr-3"
-          ]
+          "target": [".mr-3"]
         },
         {
           "any": [],
@@ -2494,9 +2226,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [],
@@ -2526,9 +2256,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [],
@@ -2558,9 +2286,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [],
@@ -2590,9 +2316,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         },
         {
           "any": [],
@@ -2622,9 +2346,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         },
         {
           "any": [],
@@ -2654,9 +2376,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub\">",
-          "target": [
-            "a[aria-label=\"GitHub\"]"
-          ]
+          "target": ["a[aria-label=\"GitHub\"]"]
         },
         {
           "any": [],
@@ -2686,9 +2406,7 @@
           "none": [],
           "impact": null,
           "html": "<a id=\"contact\" href=\"https://www.linkedin.com/in/alex-storm-skoglund-13764372/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"LinkedIn\">",
-          "target": [
-            "#contact"
-          ]
+          "target": ["#contact"]
         },
         {
           "any": [],
@@ -2718,22 +2436,14 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://www.instagram.com/skoglunddev/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Instagram\">",
-          "target": [
-            "a[aria-label=\"Instagram\"]"
-          ]
+          "target": ["a[aria-label=\"Instagram\"]"]
         }
       ]
     },
     {
       "id": "aria-valid-attr",
       "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures attributes that begin with aria- are valid ARIA attributes",
       "help": "ARIA attributes must conform to valid names",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-valid-attr?application=axeAPI",
@@ -2752,9 +2462,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"focus:outline-none\" aria-label=\"Toggle menu\">",
-          "target": [
-            "button[aria-label=\"Toggle menu\"]"
-          ]
+          "target": ["button[aria-label=\"Toggle menu\"]"]
         },
         {
           "any": [
@@ -2770,9 +2478,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Toggle theme\" class=\"text-current bg-gray-100 dark:bg-transparent p-2 rounded\">",
-          "target": [
-            ".dark\\:bg-transparent"
-          ]
+          "target": [".dark\\:bg-transparent"]
         },
         {
           "any": [
@@ -2788,9 +2494,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a>",
-          "target": [
-            "a[href$=\"#work\"]"
-          ]
+          "target": ["a[href$=\"#work\"]"]
         },
         {
           "any": [
@@ -2806,9 +2510,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a>",
-          "target": [
-            "a[href$=\"#contact\"]"
-          ]
+          "target": ["a[href$=\"#contact\"]"]
         },
         {
           "any": [
@@ -2824,9 +2526,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [
@@ -2842,9 +2542,7 @@
           "none": [],
           "impact": null,
           "html": "<button disabled=\"\" class=\"mr-3 px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"true\" aria-label=\"Previous: none\">Back</button>",
-          "target": [
-            ".mr-3"
-          ]
+          "target": [".mr-3"]
         },
         {
           "any": [
@@ -2860,9 +2558,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [
@@ -2878,9 +2574,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [
@@ -2896,9 +2590,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [
@@ -2914,9 +2606,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         },
         {
           "any": [
@@ -2932,9 +2622,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         },
         {
           "any": [
@@ -2950,9 +2638,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub\">",
-          "target": [
-            "a[aria-label=\"GitHub\"]"
-          ]
+          "target": ["a[aria-label=\"GitHub\"]"]
         },
         {
           "any": [
@@ -2968,9 +2654,7 @@
           "none": [],
           "impact": null,
           "html": "<a id=\"contact\" href=\"https://www.linkedin.com/in/alex-storm-skoglund-13764372/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"LinkedIn\">",
-          "target": [
-            "#contact"
-          ]
+          "target": ["#contact"]
         },
         {
           "any": [
@@ -2986,9 +2670,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://www.instagram.com/skoglunddev/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Instagram\">",
-          "target": [
-            "a[aria-label=\"Instagram\"]"
-          ]
+          "target": ["a[aria-label=\"Instagram\"]"]
         }
       ]
     },
@@ -3035,9 +2717,7 @@
           "none": [],
           "impact": null,
           "html": "<img src=\"/assets/semproj2.png\" alt=\"Auctio screenshot\" class=\"w-full rounded-lg object-contain shadow-sm\" style=\"aspect-ratio: 16 / 9; max-height: 640px;\">",
-          "target": [
-            ".object-contain"
-          ]
+          "target": [".object-contain"]
         }
       ]
     },
@@ -3074,9 +2754,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"focus:outline-none\" aria-label=\"Toggle menu\">",
-          "target": [
-            "button[aria-label=\"Toggle menu\"]"
-          ]
+          "target": ["button[aria-label=\"Toggle menu\"]"]
         },
         {
           "any": [
@@ -3092,9 +2770,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Toggle theme\" class=\"text-current bg-gray-100 dark:bg-transparent p-2 rounded\">",
-          "target": [
-            ".dark\\:bg-transparent"
-          ]
+          "target": [".dark\\:bg-transparent"]
         },
         {
           "any": [
@@ -3117,9 +2793,7 @@
           "none": [],
           "impact": null,
           "html": "<button disabled=\"\" class=\"mr-3 px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"true\" aria-label=\"Previous: none\">Back</button>",
-          "target": [
-            ".mr-3"
-          ]
+          "target": [".mr-3"]
         },
         {
           "any": [
@@ -3142,9 +2816,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [
@@ -3167,9 +2839,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [
@@ -3192,9 +2862,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         },
         {
           "any": [
@@ -3217,9 +2885,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         }
       ]
     },
@@ -3256,15 +2922,11 @@
               "relatedNodes": [
                 {
                   "html": "<h1 class=\"text-3xl md:text-4xl font-bold text-customBlue dark:text-customGold\">Uncovering the past while shaping the future</h1>",
-                  "target": [
-                    "h1"
-                  ]
+                  "target": ["h1"]
                 },
                 {
                   "html": "<h2 class=\"text-base md:text-lg lg:text-xl font-semibold text-customBlue\">Auctio</h2>",
-                  "target": [
-                    "h2"
-                  ]
+                  "target": ["h2"]
                 }
               ],
               "impact": "serious",
@@ -3276,9 +2938,7 @@
               "relatedNodes": [
                 {
                   "html": "<main class=\"container mx-auto flex-1 p-6\">",
-                  "target": [
-                    "main"
-                  ]
+                  "target": ["main"]
                 }
               ],
               "impact": "serious",
@@ -3289,9 +2949,7 @@
           "none": [],
           "impact": null,
           "html": "<html lang=\"en\" class=\"\">",
-          "target": [
-            "html"
-          ]
+          "target": ["html"]
         }
       ]
     },
@@ -3333,9 +2991,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"text-small w-52 lg:w-auto text-wrap lg-no-wrap font-medium text-current drop-shadow-2xl lg:text-2xl lg:font-semibold\">Frontend Portfolio 2024 - Alex Storm Skoglund</div>",
-          "target": [
-            ".text-small"
-          ]
+          "target": [".text-small"]
         },
         {
           "any": [
@@ -3358,9 +3014,7 @@
           "none": [],
           "impact": null,
           "html": "<h1 class=\"text-3xl md:text-4xl font-bold text-customBlue dark:text-customGold\">Uncovering the past while shaping the future</h1>",
-          "target": [
-            "h1"
-          ]
+          "target": ["h1"]
         },
         {
           "any": [
@@ -3383,9 +3037,7 @@
           "none": [],
           "impact": null,
           "html": "<p class=\"mt-4 max-w-2xl text-gray-700 dark:text-gray-200\">I'm Alex — an archaeologist turned frontend developer. I build clear, responsive interfaces with a focus on usability and performance.</p>",
-          "target": [
-            ".max-w-2xl"
-          ]
+          "target": [".max-w-2xl"]
         },
         {
           "any": [
@@ -3408,9 +3060,7 @@
           "none": [],
           "impact": null,
           "html": "<h2 class=\"text-base md:text-lg lg:text-xl font-semibold text-customBlue\">Auctio</h2>",
-          "target": [
-            "h2"
-          ]
+          "target": ["h2"]
         },
         {
           "any": [
@@ -3433,9 +3083,7 @@
           "none": [],
           "impact": null,
           "html": "<span class=\"mr-2\">Student Project</span>",
-          "target": [
-            ".mr-2"
-          ]
+          "target": [".mr-2"]
         },
         {
           "any": [
@@ -3458,9 +3106,7 @@
           "none": [],
           "impact": null,
           "html": "<span class=\"text-gray-500\">HTML5, JavaScript, Bootstrap, SCSS</span>",
-          "target": [
-            ".text-gray-500"
-          ]
+          "target": [".text-gray-500"]
         },
         {
           "any": [
@@ -3483,9 +3129,7 @@
           "none": [],
           "impact": null,
           "html": "<p class=\"mt-2 text-sm md:text-base text-gray-700 dark:text-gray-200\">Auctio is a semester project that lets users browse and bid on student-created items.</p>",
-          "target": [
-            ".mt-2"
-          ]
+          "target": [".mt-2"]
         },
         {
           "any": [
@@ -3508,9 +3152,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         },
         {
           "any": [
@@ -3533,9 +3175,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund/Semester-Project-2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"w-full md:w-auto text-center inline-block px-3 py-2 bg-customBlue text-white rounded-md text-sm md:text-base hover:opacity-90\">View GitHub</a>",
-          "target": [
-            ".hover\\:opacity-90"
-          ]
+          "target": [".hover\\:opacity-90"]
         },
         {
           "any": [
@@ -3558,9 +3198,7 @@
           "none": [],
           "impact": null,
           "html": "<p class=\"w-full md:w-auto text-center md:text-left\">© 2025 Alex Storm Skoglund. All rights reserved.</p>",
-          "target": [
-            ".md\\:text-left"
-          ]
+          "target": [".md\\:text-left"]
         },
         {
           "any": [
@@ -3583,9 +3221,7 @@
           "none": [],
           "impact": null,
           "html": "<p>Follow me:</p>",
-          "target": [
-            ".flex-row > p"
-          ]
+          "target": [".flex-row > p"]
         }
       ]
     },
@@ -3620,19 +3256,14 @@
           "none": [],
           "impact": null,
           "html": "<html lang=\"en\" class=\"\">",
-          "target": [
-            "html"
-          ]
+          "target": ["html"]
         }
       ]
     },
     {
       "id": "empty-heading",
       "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "best-practice"
-      ],
+      "tags": ["cat.name-role-value", "best-practice"],
       "description": "Ensures headings have discernible text",
       "help": "Headings should not be empty",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/empty-heading?application=axeAPI",
@@ -3651,9 +3282,7 @@
           "none": [],
           "impact": null,
           "html": "<h1 class=\"text-3xl md:text-4xl font-bold text-customBlue dark:text-customGold\">Uncovering the past while shaping the future</h1>",
-          "target": [
-            "h1"
-          ]
+          "target": ["h1"]
         },
         {
           "any": [
@@ -3669,19 +3298,14 @@
           "none": [],
           "impact": null,
           "html": "<h2 class=\"text-base md:text-lg lg:text-xl font-semibold text-customBlue\">Auctio</h2>",
-          "target": [
-            "h2"
-          ]
+          "target": ["h2"]
         }
       ]
     },
     {
       "id": "heading-order",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the order of headings is semantically correct",
       "help": "Heading levels should only increase by one",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/heading-order?application=axeAPI",
@@ -3715,9 +3339,7 @@
           "none": [],
           "impact": null,
           "html": "<h1 class=\"text-3xl md:text-4xl font-bold text-customBlue dark:text-customGold\">Uncovering the past while shaping the future</h1>",
-          "target": [
-            "h1"
-          ]
+          "target": ["h1"]
         },
         {
           "any": [
@@ -3733,9 +3355,7 @@
           "none": [],
           "impact": null,
           "html": "<h2 class=\"text-base md:text-lg lg:text-xl font-semibold text-customBlue\">Auctio</h2>",
-          "target": [
-            "h2"
-          ]
+          "target": ["h2"]
         }
       ]
     },
@@ -3770,9 +3390,7 @@
           "none": [],
           "impact": null,
           "html": "<html lang=\"en\" class=\"\">",
-          "target": [
-            "html"
-          ]
+          "target": ["html"]
         }
       ]
     },
@@ -3807,9 +3425,7 @@
           ],
           "impact": null,
           "html": "<html lang=\"en\" class=\"\">",
-          "target": [
-            "html"
-          ]
+          "target": ["html"]
         }
       ]
     },
@@ -3855,9 +3471,7 @@
           ],
           "impact": null,
           "html": "<img src=\"/assets/Alex.png\" alt=\"Alex logo\" class=\"w-12 h-12 rounded-full object-cover border-2 border-customGold\">",
-          "target": [
-            ".w-12"
-          ]
+          "target": [".w-12"]
         },
         {
           "any": [
@@ -3881,9 +3495,7 @@
           ],
           "impact": null,
           "html": "<img src=\"/assets/mudman.jpg\" alt=\"Archaeological dig: mudman\" class=\"w-full h-full object-cover\">",
-          "target": [
-            "img[src$=\"mudman.jpg\"]"
-          ]
+          "target": ["img[src$=\"mudman.jpg\"]"]
         },
         {
           "any": [
@@ -3907,19 +3519,14 @@
           ],
           "impact": null,
           "html": "<img src=\"/assets/semproj2.png\" alt=\"Auctio screenshot\" class=\"w-full rounded-lg object-contain shadow-sm\" style=\"aspect-ratio: 16 / 9; max-height: 640px;\">",
-          "target": [
-            ".object-contain"
-          ]
+          "target": [".object-contain"]
         }
       ]
     },
     {
       "id": "image-redundant-alt",
       "impact": null,
-      "tags": [
-        "cat.text-alternatives",
-        "best-practice"
-      ],
+      "tags": ["cat.text-alternatives", "best-practice"],
       "description": "Ensure image alternative is not repeated as text",
       "help": "Alternative text of images should not be repeated as text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/image-redundant-alt?application=axeAPI",
@@ -3938,9 +3545,7 @@
           ],
           "impact": null,
           "html": "<img src=\"/assets/Alex.png\" alt=\"Alex logo\" class=\"w-12 h-12 rounded-full object-cover border-2 border-customGold\">",
-          "target": [
-            ".w-12"
-          ]
+          "target": [".w-12"]
         },
         {
           "any": [],
@@ -3956,9 +3561,7 @@
           ],
           "impact": null,
           "html": "<img src=\"/assets/mudman.jpg\" alt=\"Archaeological dig: mudman\" class=\"w-full h-full object-cover\">",
-          "target": [
-            "img[src$=\"mudman.jpg\"]"
-          ]
+          "target": ["img[src$=\"mudman.jpg\"]"]
         },
         {
           "any": [],
@@ -3974,19 +3577,14 @@
           ],
           "impact": null,
           "html": "<img src=\"/assets/semproj2.png\" alt=\"Auctio screenshot\" class=\"w-full rounded-lg object-contain shadow-sm\" style=\"aspect-ratio: 16 / 9; max-height: 640px;\">",
-          "target": [
-            ".object-contain"
-          ]
+          "target": [".object-contain"]
         }
       ]
     },
     {
       "id": "landmark-banner-is-top-level",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the banner landmark is at top level",
       "help": "Banner landmark should not be contained in another landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-banner-is-top-level?application=axeAPI",
@@ -4007,19 +3605,14 @@
           "none": [],
           "impact": null,
           "html": "<header class=\"bg-white text-customBlue dark:bg-customBlue dark:text-customGold p-4 md:p-8 border-b dark:border-customGold shadow-lg sticky top-0 z-50\">",
-          "target": [
-            "header"
-          ]
+          "target": ["header"]
         }
       ]
     },
     {
       "id": "landmark-contentinfo-is-top-level",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the contentinfo landmark is at top level",
       "help": "Contentinfo landmark should not be contained in another landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-contentinfo-is-top-level?application=axeAPI",
@@ -4040,19 +3633,14 @@
           "none": [],
           "impact": null,
           "html": "<footer class=\"bg-customGold text-customBlue p-4 mt-auto\">",
-          "target": [
-            "footer"
-          ]
+          "target": ["footer"]
         }
       ]
     },
     {
       "id": "landmark-main-is-top-level",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the main landmark is at top level",
       "help": "Main landmark should not be contained in another landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-main-is-top-level?application=axeAPI",
@@ -4073,19 +3661,14 @@
           "none": [],
           "impact": null,
           "html": "<main class=\"container mx-auto flex-1 p-6\">",
-          "target": [
-            "main"
-          ]
+          "target": ["main"]
         }
       ]
     },
     {
       "id": "landmark-no-duplicate-banner",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the document has at most one banner landmark",
       "help": "Document should not have more than one banner landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-no-duplicate-banner?application=axeAPI",
@@ -4104,19 +3687,14 @@
           "none": [],
           "impact": null,
           "html": "<header class=\"bg-white text-customBlue dark:bg-customBlue dark:text-customGold p-4 md:p-8 border-b dark:border-customGold shadow-lg sticky top-0 z-50\">",
-          "target": [
-            "header"
-          ]
+          "target": ["header"]
         }
       ]
     },
     {
       "id": "landmark-no-duplicate-contentinfo",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the document has at most one contentinfo landmark",
       "help": "Document should not have more than one contentinfo landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-no-duplicate-contentinfo?application=axeAPI",
@@ -4135,19 +3713,14 @@
           "none": [],
           "impact": null,
           "html": "<footer class=\"bg-customGold text-customBlue p-4 mt-auto\">",
-          "target": [
-            "footer"
-          ]
+          "target": ["footer"]
         }
       ]
     },
     {
       "id": "landmark-no-duplicate-main",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the document has at most one main landmark",
       "help": "Document should not have more than one main landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-no-duplicate-main?application=axeAPI",
@@ -4166,19 +3739,14 @@
           "none": [],
           "impact": null,
           "html": "<main class=\"container mx-auto flex-1 p-6\">",
-          "target": [
-            "main"
-          ]
+          "target": ["main"]
         }
       ]
     },
     {
       "id": "landmark-one-main",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensures the document has a main landmark",
       "help": "Document should have one main landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-one-main?application=axeAPI",
@@ -4192,9 +3760,7 @@
               "relatedNodes": [
                 {
                   "html": "<main class=\"container mx-auto flex-1 p-6\">",
-                  "target": [
-                    "main"
-                  ]
+                  "target": ["main"]
                 }
               ],
               "impact": "moderate",
@@ -4204,19 +3770,14 @@
           "none": [],
           "impact": null,
           "html": "<html lang=\"en\" class=\"\">",
-          "target": [
-            "html"
-          ]
+          "target": ["html"]
         }
       ]
     },
     {
       "id": "landmark-unique",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "help": "Ensures landmarks are unique",
       "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/landmark-unique?application=axeAPI",
@@ -4238,9 +3799,7 @@
           "none": [],
           "impact": null,
           "html": "<header class=\"bg-white text-customBlue dark:bg-customBlue dark:text-customGold p-4 md:p-8 border-b dark:border-customGold shadow-lg sticky top-0 z-50\">",
-          "target": [
-            "header"
-          ]
+          "target": ["header"]
         },
         {
           "any": [
@@ -4259,9 +3818,7 @@
           "none": [],
           "impact": null,
           "html": "<nav class=\"flex items-center justify-between\">",
-          "target": [
-            "nav"
-          ]
+          "target": ["nav"]
         },
         {
           "any": [
@@ -4280,9 +3837,7 @@
           "none": [],
           "impact": null,
           "html": "<main class=\"container mx-auto flex-1 p-6\">",
-          "target": [
-            "main"
-          ]
+          "target": ["main"]
         },
         {
           "any": [
@@ -4301,9 +3856,7 @@
           "none": [],
           "impact": null,
           "html": "<footer class=\"bg-customGold text-customBlue p-4 mt-auto\">",
-          "target": [
-            "footer"
-          ]
+          "target": ["footer"]
         }
       ]
     },
@@ -4357,9 +3910,7 @@
           ],
           "impact": null,
           "html": "<a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a>",
-          "target": [
-            "a[href$=\"#work\"]"
-          ]
+          "target": ["a[href$=\"#work\"]"]
         },
         {
           "any": [
@@ -4390,9 +3941,7 @@
           ],
           "impact": null,
           "html": "<a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a>",
-          "target": [
-            "a[href$=\"#contact\"]"
-          ]
+          "target": ["a[href$=\"#contact\"]"]
         },
         {
           "any": [
@@ -4416,9 +3965,7 @@
           ],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund/Semester-Project-2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"w-full md:w-auto text-center inline-block px-3 py-2 bg-customBlue text-white rounded-md text-sm md:text-base hover:opacity-90\">View GitHub</a>",
-          "target": [
-            ".hover\\:opacity-90"
-          ]
+          "target": [".hover\\:opacity-90"]
         },
         {
           "any": [
@@ -4442,9 +3989,7 @@
           ],
           "impact": null,
           "html": "<a href=\"https://auctio.netlify.app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"w-full md:w-auto text-center inline-block px-3 py-2 bg-customGold text-white rounded-md text-sm md:text-base hover:opacity-95 shadow-md transition\">View Live Demo</a>",
-          "target": [
-            ".hover\\:opacity-95"
-          ]
+          "target": [".hover\\:opacity-95"]
         },
         {
           "any": [
@@ -4468,9 +4013,7 @@
           ],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub\">",
-          "target": [
-            "a[aria-label=\"GitHub\"]"
-          ]
+          "target": ["a[aria-label=\"GitHub\"]"]
         },
         {
           "any": [
@@ -4494,9 +4037,7 @@
           ],
           "impact": null,
           "html": "<a id=\"contact\" href=\"https://www.linkedin.com/in/alex-storm-skoglund-13764372/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"LinkedIn\">",
-          "target": [
-            "#contact"
-          ]
+          "target": ["#contact"]
         },
         {
           "any": [
@@ -4520,9 +4061,7 @@
           ],
           "impact": null,
           "html": "<a href=\"https://www.instagram.com/skoglunddev/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Instagram\">",
-          "target": [
-            "a[aria-label=\"Instagram\"]"
-          ]
+          "target": ["a[aria-label=\"Instagram\"]"]
         }
       ]
     },
@@ -4554,9 +4093,7 @@
           ],
           "impact": null,
           "html": "<ul class=\"flex-col md:flex-row rounded-md md:flex md:space-x-4 fixed md:static bg-opacity-80 bg-customBlue z-50 w-full md:w-auto transition-all duration-300 ease-in-out top-[-200px] left-0 right-0\">",
-          "target": [
-            "ul"
-          ]
+          "target": ["ul"]
         }
       ]
     },
@@ -4588,9 +4125,7 @@
           "none": [],
           "impact": null,
           "html": "<li class=\"font-bold p-4 md:p-0\"><a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a></li>",
-          "target": [
-            "li:nth-child(1)"
-          ]
+          "target": ["li:nth-child(1)"]
         },
         {
           "any": [
@@ -4606,19 +4141,14 @@
           "none": [],
           "impact": null,
           "html": "<li class=\"font-bold p-4 md:p-0\"><a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a></li>",
-          "target": [
-            "li:nth-child(2)"
-          ]
+          "target": ["li:nth-child(2)"]
         }
       ]
     },
     {
       "id": "meta-viewport-large",
       "impact": null,
-      "tags": [
-        "cat.sensory-and-visual-cues",
-        "best-practice"
-      ],
+      "tags": ["cat.sensory-and-visual-cues", "best-practice"],
       "description": "Ensures <meta name=\"viewport\"> can scale a significant amount",
       "help": "Users should be able to zoom and scale the text up to 500%",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/meta-viewport-large?application=axeAPI",
@@ -4637,9 +4167,7 @@
           "none": [],
           "impact": null,
           "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
-          "target": [
-            "meta[name=\"viewport\"]"
-          ]
+          "target": ["meta[name=\"viewport\"]"]
         }
       ]
     },
@@ -4672,9 +4200,7 @@
           "none": [],
           "impact": null,
           "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
-          "target": [
-            "meta[name=\"viewport\"]"
-          ]
+          "target": ["meta[name=\"viewport\"]"]
         }
       ]
     },
@@ -4708,9 +4234,7 @@
           "none": [],
           "impact": null,
           "html": "<img src=\"/assets/Alex.png\" alt=\"Alex logo\" class=\"w-12 h-12 rounded-full object-cover border-2 border-customGold\">",
-          "target": [
-            ".w-12"
-          ]
+          "target": [".w-12"]
         },
         {
           "any": [
@@ -4726,9 +4250,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"focus:outline-none\" aria-label=\"Toggle menu\">",
-          "target": [
-            "button[aria-label=\"Toggle menu\"]"
-          ]
+          "target": ["button[aria-label=\"Toggle menu\"]"]
         },
         {
           "any": [
@@ -4744,9 +4266,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Toggle theme\" class=\"text-current bg-gray-100 dark:bg-transparent p-2 rounded\">",
-          "target": [
-            ".dark\\:bg-transparent"
-          ]
+          "target": [".dark\\:bg-transparent"]
         },
         {
           "any": [
@@ -4762,9 +4282,7 @@
           "none": [],
           "impact": null,
           "html": "<img src=\"/assets/mudman.jpg\" alt=\"Archaeological dig: mudman\" class=\"w-full h-full object-cover\">",
-          "target": [
-            "img[src$=\"mudman.jpg\"]"
-          ]
+          "target": ["img[src$=\"mudman.jpg\"]"]
         },
         {
           "any": [
@@ -4780,9 +4298,7 @@
           "none": [],
           "impact": null,
           "html": "<img src=\"/assets/semproj2.png\" alt=\"Auctio screenshot\" class=\"w-full rounded-lg object-contain shadow-sm\" style=\"aspect-ratio: 16 / 9; max-height: 640px;\">",
-          "target": [
-            ".object-contain"
-          ]
+          "target": [".object-contain"]
         },
         {
           "any": [
@@ -4798,9 +4314,7 @@
           "none": [],
           "impact": null,
           "html": "<button disabled=\"\" class=\"mr-3 px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"true\" aria-label=\"Previous: none\">Back</button>",
-          "target": [
-            ".mr-3"
-          ]
+          "target": [".mr-3"]
         },
         {
           "any": [
@@ -4816,9 +4330,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [
@@ -4834,9 +4346,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [
@@ -4852,9 +4362,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         },
         {
           "any": [
@@ -4870,19 +4378,14 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         }
       ]
     },
     {
       "id": "page-has-heading-one",
       "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
+      "tags": ["cat.semantics", "best-practice"],
       "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
       "help": "Page should contain a level-one heading",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/page-has-heading-one?application=axeAPI",
@@ -4896,9 +4399,7 @@
               "relatedNodes": [
                 {
                   "html": "<h1 class=\"text-3xl md:text-4xl font-bold text-customBlue dark:text-customGold\">Uncovering the past while shaping the future</h1>",
-                  "target": [
-                    "h1"
-                  ]
+                  "target": ["h1"]
                 }
               ],
               "impact": "moderate",
@@ -4908,19 +4409,14 @@
           "none": [],
           "impact": null,
           "html": "<html lang=\"en\" class=\"\">",
-          "target": [
-            "html"
-          ]
+          "target": ["html"]
         }
       ]
     },
     {
       "id": "region",
       "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
+      "tags": ["cat.keyboard", "best-practice"],
       "description": "Ensures all page content is contained by landmarks",
       "help": "All page content should be contained by landmarks",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/region?application=axeAPI",
@@ -4941,9 +4437,7 @@
           "none": [],
           "impact": null,
           "html": "<div id=\"root\">",
-          "target": [
-            "#root"
-          ]
+          "target": ["#root"]
         },
         {
           "any": [
@@ -4961,9 +4455,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"min-h-screen flex flex-col bg-white text-gray-800 dark:bg-gradient-to-b dark:from-slate-800 dark:to-slate-900 dark:text-white\">",
-          "target": [
-            ".min-h-screen"
-          ]
+          "target": [".min-h-screen"]
         },
         {
           "any": [
@@ -4981,9 +4473,7 @@
           "none": [],
           "impact": null,
           "html": "<header class=\"bg-white text-customBlue dark:bg-customBlue dark:text-customGold p-4 md:p-8 border-b dark:border-customGold shadow-lg sticky top-0 z-50\">",
-          "target": [
-            "header"
-          ]
+          "target": ["header"]
         },
         {
           "any": [
@@ -5001,9 +4491,7 @@
           "none": [],
           "impact": null,
           "html": "<nav class=\"flex items-center justify-between\">",
-          "target": [
-            "nav"
-          ]
+          "target": ["nav"]
         },
         {
           "any": [
@@ -5021,9 +4509,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex items-center gap-3\">",
-          "target": [
-            "nav > .gap-3.items-center.flex"
-          ]
+          "target": ["nav > .gap-3.items-center.flex"]
         },
         {
           "any": [
@@ -5041,9 +4527,7 @@
           "none": [],
           "impact": null,
           "html": "<img src=\"/assets/Alex.png\" alt=\"Alex logo\" class=\"w-12 h-12 rounded-full object-cover border-2 border-customGold\">",
-          "target": [
-            ".w-12"
-          ]
+          "target": [".w-12"]
         },
         {
           "any": [
@@ -5061,9 +4545,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"text-small w-52 lg:w-auto text-wrap lg-no-wrap font-medium text-current drop-shadow-2xl lg:text-2xl lg:font-semibold\">Frontend Portfolio 2024 - Alex Storm Skoglund</div>",
-          "target": [
-            ".text-small"
-          ]
+          "target": [".text-small"]
         },
         {
           "any": [
@@ -5081,9 +4563,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"md:hidden\">",
-          "target": [
-            ".md\\:hidden"
-          ]
+          "target": [".md\\:hidden"]
         },
         {
           "any": [
@@ -5101,9 +4581,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"focus:outline-none\" aria-label=\"Toggle menu\">",
-          "target": [
-            "button[aria-label=\"Toggle menu\"]"
-          ]
+          "target": ["button[aria-label=\"Toggle menu\"]"]
         },
         {
           "any": [
@@ -5121,9 +4599,7 @@
           "none": [],
           "impact": null,
           "html": "<svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 448 512\" class=\"text-3xl\" height=\"1em\" width=\"1em\" xmlns=\"http://www.w3.org/2000/svg\">",
-          "target": [
-            ".text-3xl[viewBox=\"0 0 448 512\"]"
-          ]
+          "target": [".text-3xl[viewBox=\"0 0 448 512\"]"]
         },
         {
           "any": [
@@ -5141,9 +4617,7 @@
           "none": [],
           "impact": null,
           "html": "<path d=\"M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z\">",
-          "target": [
-            ".text-3xl[viewBox=\"0 0 448 512\"] > path"
-          ]
+          "target": [".text-3xl[viewBox=\"0 0 448 512\"] > path"]
         },
         {
           "any": [
@@ -5161,9 +4635,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex items-center gap-4\">",
-          "target": [
-            ".gap-4.items-center.flex"
-          ]
+          "target": [".gap-4.items-center.flex"]
         },
         {
           "any": [
@@ -5181,9 +4653,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Toggle theme\" class=\"text-current bg-gray-100 dark:bg-transparent p-2 rounded\">",
-          "target": [
-            ".dark\\:bg-transparent"
-          ]
+          "target": [".dark\\:bg-transparent"]
         },
         {
           "any": [
@@ -5201,9 +4671,7 @@
           "none": [],
           "impact": null,
           "html": "<svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 512 512\" height=\"1em\" width=\"1em\" xmlns=\"http://www.w3.org/2000/svg\">",
-          "target": [
-            "svg[viewBox=\"0 0 512 512\"]"
-          ]
+          "target": ["svg[viewBox=\"0 0 512 512\"]"]
         },
         {
           "any": [
@@ -5221,9 +4689,7 @@
           "none": [],
           "impact": null,
           "html": "<path d=\"M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z\">",
-          "target": [
-            "svg[viewBox=\"0 0 512 512\"] > path"
-          ]
+          "target": ["svg[viewBox=\"0 0 512 512\"] > path"]
         },
         {
           "any": [
@@ -5241,9 +4707,7 @@
           "none": [],
           "impact": null,
           "html": "<ul class=\"flex-col md:flex-row rounded-md md:flex md:space-x-4 fixed md:static bg-opacity-80 bg-customBlue z-50 w-full md:w-auto transition-all duration-300 ease-in-out top-[-200px] left-0 right-0\">",
-          "target": [
-            "ul"
-          ]
+          "target": ["ul"]
         },
         {
           "any": [
@@ -5261,9 +4725,7 @@
           "none": [],
           "impact": null,
           "html": "<li class=\"font-bold p-4 md:p-0\"><a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a></li>",
-          "target": [
-            "li:nth-child(1)"
-          ]
+          "target": ["li:nth-child(1)"]
         },
         {
           "any": [
@@ -5281,9 +4743,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a>",
-          "target": [
-            "a[href$=\"#work\"]"
-          ]
+          "target": ["a[href$=\"#work\"]"]
         },
         {
           "any": [
@@ -5301,9 +4761,7 @@
           "none": [],
           "impact": null,
           "html": "<li class=\"font-bold p-4 md:p-0\"><a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a></li>",
-          "target": [
-            "li:nth-child(2)"
-          ]
+          "target": ["li:nth-child(2)"]
         },
         {
           "any": [
@@ -5321,9 +4779,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a>",
-          "target": [
-            "a[href$=\"#contact\"]"
-          ]
+          "target": ["a[href$=\"#contact\"]"]
         },
         {
           "any": [
@@ -5341,9 +4797,7 @@
           "none": [],
           "impact": null,
           "html": "<main class=\"container mx-auto flex-1 p-6\">",
-          "target": [
-            "main"
-          ]
+          "target": ["main"]
         },
         {
           "any": [
@@ -5361,9 +4815,7 @@
           "none": [],
           "impact": null,
           "html": "<section class=\"flex flex-col items-center text-center py-8\">",
-          "target": [
-            ".py-8"
-          ]
+          "target": [".py-8"]
         },
         {
           "any": [
@@ -5381,9 +4833,7 @@
           "none": [],
           "impact": null,
           "html": "<h1 class=\"text-3xl md:text-4xl font-bold text-customBlue dark:text-customGold\">Uncovering the past while shaping the future</h1>",
-          "target": [
-            "h1"
-          ]
+          "target": ["h1"]
         },
         {
           "any": [
@@ -5401,9 +4851,7 @@
           "none": [],
           "impact": null,
           "html": "<p class=\"mt-4 max-w-2xl text-gray-700 dark:text-gray-200\">I'm Alex — an archaeologist turned frontend developer. I build clear, responsive interfaces with a focus on usability and performance.</p>",
-          "target": [
-            ".max-w-2xl"
-          ]
+          "target": [".max-w-2xl"]
         },
         {
           "any": [
@@ -5421,9 +4869,7 @@
           "none": [],
           "impact": null,
           "html": "<section id=\"work\" class=\"my-8\">",
-          "target": [
-            "#work"
-          ]
+          "target": ["#work"]
         },
         {
           "any": [
@@ -5441,9 +4887,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex flex-col lg:flex-row gap-6 items-start\">",
-          "target": [
-            ".lg\\:flex-row"
-          ]
+          "target": [".lg\\:flex-row"]
         },
         {
           "any": [
@@ -5461,9 +4905,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"w-full lg:w-2/5\"><div class=\"bg-gray-100 rounded-lg overflow-hidden h-full flex items-center\"><img src=\"/assets/mudman.jpg\" alt=\"Archaeological dig: mudman\" class=\"w-full h-full object-cover\"></div></div>",
-          "target": [
-            ".lg\\:w-2\\/5"
-          ]
+          "target": [".lg\\:w-2\\/5"]
         },
         {
           "any": [
@@ -5481,9 +4923,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"bg-gray-100 rounded-lg overflow-hidden h-full flex items-center\"><img src=\"/assets/mudman.jpg\" alt=\"Archaeological dig: mudman\" class=\"w-full h-full object-cover\"></div>",
-          "target": [
-            ".bg-gray-100.rounded-lg.overflow-hidden"
-          ]
+          "target": [".bg-gray-100.rounded-lg.overflow-hidden"]
         },
         {
           "any": [
@@ -5501,9 +4941,7 @@
           "none": [],
           "impact": null,
           "html": "<img src=\"/assets/mudman.jpg\" alt=\"Archaeological dig: mudman\" class=\"w-full h-full object-cover\">",
-          "target": [
-            "img[src$=\"mudman.jpg\"]"
-          ]
+          "target": ["img[src$=\"mudman.jpg\"]"]
         },
         {
           "any": [
@@ -5521,9 +4959,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"w-full lg:w-3/5\">",
-          "target": [
-            ".lg\\:w-3\\/5"
-          ]
+          "target": [".lg\\:w-3\\/5"]
         },
         {
           "any": [
@@ -5541,9 +4977,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"bg-white/90 rounded-2xl p-4 shadow-lg h-full\">",
-          "target": [
-            ".bg-white\\/90"
-          ]
+          "target": [".bg-white\\/90"]
         },
         {
           "any": [
@@ -5561,9 +4995,7 @@
           "none": [],
           "impact": null,
           "html": "<div tabindex=\"0\" class=\"outline-none\">",
-          "target": [
-            ".outline-none"
-          ]
+          "target": [".outline-none"]
         },
         {
           "any": [
@@ -5581,9 +5013,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"h-full\">",
-          "target": [
-            ".outline-none > .h-full"
-          ]
+          "target": [".outline-none > .h-full"]
         },
         {
           "any": [
@@ -5601,9 +5031,7 @@
           "none": [],
           "impact": null,
           "html": "<article class=\"w-full h-full flex flex-col items-stretch gap-4 p-4 bg-white rounded-xl shadow-md min-h-[300px] relative z-30 overflow-hidden dark:bg-slate-800 dark:text-white\">",
-          "target": [
-            "article"
-          ]
+          "target": ["article"]
         },
         {
           "any": [
@@ -5621,9 +5049,7 @@
           "none": [],
           "impact": null,
           "html": "<img src=\"/assets/semproj2.png\" alt=\"Auctio screenshot\" class=\"w-full rounded-lg object-contain shadow-sm\" style=\"aspect-ratio: 16 / 9; max-height: 640px;\">",
-          "target": [
-            ".object-contain"
-          ]
+          "target": [".object-contain"]
         },
         {
           "any": [
@@ -5641,9 +5067,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex-1 w-full flex flex-col justify-between h-full text-gray-900 md:pl-4\">",
-          "target": [
-            ".text-gray-900"
-          ]
+          "target": [".text-gray-900"]
         },
         {
           "any": [
@@ -5661,9 +5085,7 @@
           "none": [],
           "impact": null,
           "html": "<div>",
-          "target": [
-            ".text-gray-900 > div"
-          ]
+          "target": [".text-gray-900 > div"]
         },
         {
           "any": [
@@ -5681,9 +5103,7 @@
           "none": [],
           "impact": null,
           "html": "<h2 class=\"text-base md:text-lg lg:text-xl font-semibold text-customBlue\">Auctio</h2>",
-          "target": [
-            "h2"
-          ]
+          "target": ["h2"]
         },
         {
           "any": [
@@ -5701,9 +5121,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"text-xs md:text-sm text-gray-600 mt-1\"><span class=\"mr-2\">Student Project</span><span class=\"text-gray-500\">HTML5, JavaScript, Bootstrap, SCSS</span></div>",
-          "target": [
-            ".text-xs"
-          ]
+          "target": [".text-xs"]
         },
         {
           "any": [
@@ -5721,9 +5139,7 @@
           "none": [],
           "impact": null,
           "html": "<span class=\"mr-2\">Student Project</span>",
-          "target": [
-            ".mr-2"
-          ]
+          "target": [".mr-2"]
         },
         {
           "any": [
@@ -5741,9 +5157,7 @@
           "none": [],
           "impact": null,
           "html": "<span class=\"text-gray-500\">HTML5, JavaScript, Bootstrap, SCSS</span>",
-          "target": [
-            ".text-gray-500"
-          ]
+          "target": [".text-gray-500"]
         },
         {
           "any": [
@@ -5761,9 +5175,7 @@
           "none": [],
           "impact": null,
           "html": "<p class=\"mt-2 text-sm md:text-base text-gray-700 dark:text-gray-200\">Auctio is a semester project that lets users browse and bid on student-created items.</p>",
-          "target": [
-            ".mt-2"
-          ]
+          "target": [".mt-2"]
         },
         {
           "any": [
@@ -5781,9 +5193,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"sr-only\" aria-live=\"polite\" role=\"status\">Slide 1 of 3: Auctio</div>",
-          "target": [
-            "div[aria-live=\"polite\"]"
-          ]
+          "target": ["div[aria-live=\"polite\"]"]
         },
         {
           "any": [
@@ -5801,9 +5211,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex items-center justify-center mt-4 gap-3\">",
-          "target": [
-            ".justify-center.mt-4.gap-3:nth-child(3)"
-          ]
+          "target": [".justify-center.mt-4.gap-3:nth-child(3)"]
         },
         {
           "any": [
@@ -5821,9 +5229,7 @@
           "none": [],
           "impact": null,
           "html": "<button disabled=\"\" class=\"mr-3 px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"true\" aria-label=\"Previous: none\">Back</button>",
-          "target": [
-            ".mr-3"
-          ]
+          "target": [".mr-3"]
         },
         {
           "any": [
@@ -5841,9 +5247,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex gap-2 items-center\" role=\"tablist\" aria-label=\"Project slides\">",
-          "target": [
-            ".gap-2"
-          ]
+          "target": [".gap-2"]
         },
         {
           "any": [
@@ -5861,9 +5265,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"]"]
         },
         {
           "any": [
@@ -5881,9 +5283,7 @@
           "none": [],
           "impact": null,
           "html": "<span class=\"sr-only\">Slide 1 (current)</span>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"] > .sr-only"
-          ]
+          "target": ["button[aria-label=\"Go to slide 1\"] > .sr-only"]
         },
         {
           "any": [
@@ -5901,9 +5301,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"]"]
         },
         {
           "any": [
@@ -5921,9 +5319,7 @@
           "none": [],
           "impact": null,
           "html": "<span class=\"sr-only\">Slide 2 </span>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"] > .sr-only"
-          ]
+          "target": ["button[aria-label=\"Go to slide 2\"] > .sr-only"]
         },
         {
           "any": [
@@ -5941,9 +5337,7 @@
           "none": [],
           "impact": null,
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"]"]
         },
         {
           "any": [
@@ -5961,9 +5355,7 @@
           "none": [],
           "impact": null,
           "html": "<span class=\"sr-only\">Slide 3 </span>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"] > .sr-only"
-          ]
+          "target": ["button[aria-label=\"Go to slide 3\"] > .sr-only"]
         },
         {
           "any": [
@@ -5981,9 +5373,7 @@
           "none": [],
           "impact": null,
           "html": "<button class=\"px-3 py-1 bg-gray-800 text-white rounded disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2\" aria-disabled=\"false\" aria-label=\"Next: BuyThat\">Next</button>",
-          "target": [
-            "button[aria-label=\"Next: BuyThat\"]"
-          ]
+          "target": ["button[aria-label=\"Next: BuyThat\"]"]
         },
         {
           "any": [
@@ -6001,9 +5391,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"mt-4 flex justify-center gap-3\">",
-          "target": [
-            ".mt-4.justify-center.gap-3:nth-child(4)"
-          ]
+          "target": [".mt-4.justify-center.gap-3:nth-child(4)"]
         },
         {
           "any": [
@@ -6021,9 +5409,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund/Semester-Project-2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"w-full md:w-auto text-center inline-block px-3 py-2 bg-customBlue text-white rounded-md text-sm md:text-base hover:opacity-90\">View GitHub</a>",
-          "target": [
-            ".hover\\:opacity-90"
-          ]
+          "target": [".hover\\:opacity-90"]
         },
         {
           "any": [
@@ -6041,9 +5427,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://auctio.netlify.app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"w-full md:w-auto text-center inline-block px-3 py-2 bg-customGold text-white rounded-md text-sm md:text-base hover:opacity-95 shadow-md transition\">View Live Demo</a>",
-          "target": [
-            ".hover\\:opacity-95"
-          ]
+          "target": [".hover\\:opacity-95"]
         },
         {
           "any": [
@@ -6061,9 +5445,7 @@
           "none": [],
           "impact": null,
           "html": "<footer class=\"bg-customGold text-customBlue p-4 mt-auto\">",
-          "target": [
-            "footer"
-          ]
+          "target": ["footer"]
         },
         {
           "any": [
@@ -6081,9 +5463,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex flex-col md:flex-row flex-wrap justify-between text-base font-semibold items-center container space-y-4 md:space-y-0\">",
-          "target": [
-            ".flex-wrap"
-          ]
+          "target": [".flex-wrap"]
         },
         {
           "any": [
@@ -6101,9 +5481,7 @@
           "none": [],
           "impact": null,
           "html": "<p class=\"w-full md:w-auto text-center md:text-left\">© 2025 Alex Storm Skoglund. All rights reserved.</p>",
-          "target": [
-            ".md\\:text-left"
-          ]
+          "target": [".md\\:text-left"]
         },
         {
           "any": [
@@ -6121,9 +5499,7 @@
           "none": [],
           "impact": null,
           "html": "<div class=\"flex flex-row justify-center md:justify-end items-center w-full md:w-auto space-x-4\">",
-          "target": [
-            ".flex-row"
-          ]
+          "target": [".flex-row"]
         },
         {
           "any": [
@@ -6141,9 +5517,7 @@
           "none": [],
           "impact": null,
           "html": "<p>Follow me:</p>",
-          "target": [
-            ".flex-row > p"
-          ]
+          "target": [".flex-row > p"]
         },
         {
           "any": [
@@ -6161,9 +5535,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://github.com/StormSkoglund\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub\">",
-          "target": [
-            "a[aria-label=\"GitHub\"]"
-          ]
+          "target": ["a[aria-label=\"GitHub\"]"]
         },
         {
           "any": [
@@ -6181,9 +5553,7 @@
           "none": [],
           "impact": null,
           "html": "<svg stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" viewBox=\"0 0 496 512\" class=\"text-xl text-customBlue hover:scale-110\" height=\"1em\" width=\"1em\" xmlns=\"http://www.w3.org/2000/svg\">",
-          "target": [
-            "svg[viewBox=\"0 0 496 512\"]"
-          ]
+          "target": ["svg[viewBox=\"0 0 496 512\"]"]
         },
         {
           "any": [
@@ -6201,9 +5571,7 @@
           "none": [],
           "impact": null,
           "html": "<path d=\"M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z\">",
-          "target": [
-            "svg[viewBox=\"0 0 496 512\"] > path"
-          ]
+          "target": ["svg[viewBox=\"0 0 496 512\"] > path"]
         },
         {
           "any": [
@@ -6221,9 +5589,7 @@
           "none": [],
           "impact": null,
           "html": "<a id=\"contact\" href=\"https://www.linkedin.com/in/alex-storm-skoglund-13764372/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"LinkedIn\">",
-          "target": [
-            "#contact"
-          ]
+          "target": ["#contact"]
         },
         {
           "any": [
@@ -6281,9 +5647,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"https://www.instagram.com/skoglunddev/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Instagram\">",
-          "target": [
-            "a[aria-label=\"Instagram\"]"
-          ]
+          "target": ["a[aria-label=\"Instagram\"]"]
         },
         {
           "any": [
@@ -6330,10 +5694,7 @@
     {
       "id": "skip-link",
       "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
+      "tags": ["cat.keyboard", "best-practice"],
       "description": "Ensure all skip links have a focusable target",
       "help": "The skip-link target should exist and be focusable",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/skip-link?application=axeAPI",
@@ -6352,9 +5713,7 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#work\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"My Work\">My Work</a>",
-          "target": [
-            "a[href$=\"#work\"]"
-          ]
+          "target": ["a[href$=\"#work\"]"]
         },
         {
           "any": [
@@ -6370,19 +5729,14 @@
           "none": [],
           "impact": null,
           "html": "<a href=\"#contact\" class=\"hover:scale-90 block md:inline-block focus:outline-none focus:ring-2 focus:ring-customGold\" aria-label=\"Social Media\">SoMe</a>",
-          "target": [
-            "a[href$=\"#contact\"]"
-          ]
+          "target": ["a[href$=\"#contact\"]"]
         }
       ]
     },
     {
       "id": "tabindex",
       "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
+      "tags": ["cat.keyboard", "best-practice"],
       "description": "Ensures tabindex attribute values are not greater than 0",
       "help": "Elements should not have tabindex greater than zero",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/tabindex?application=axeAPI",
@@ -6401,9 +5755,7 @@
           "none": [],
           "impact": null,
           "html": "<div tabindex=\"0\" class=\"outline-none\">",
-          "target": [
-            ".outline-none"
-          ]
+          "target": [".outline-none"]
         }
       ]
     }
@@ -6413,13 +5765,7 @@
     {
       "id": "aria-allowed-attr",
       "impact": "critical",
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
+      "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
       "description": "Ensures an element's role supports its ARIA attributes",
       "help": "Elements must only use supported ARIA attributes",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.8/aria-allowed-attr?application=axeAPI",
@@ -6429,9 +5775,7 @@
           "all": [
             {
               "id": "aria-allowed-attr",
-              "data": [
-                "aria-pressed=\"true\""
-              ],
+              "data": ["aria-pressed=\"true\""],
               "relatedNodes": [],
               "impact": "critical",
               "message": "ARIA attribute is not allowed: aria-pressed=\"true\""
@@ -6440,9 +5784,7 @@
           "none": [],
           "impact": "critical",
           "html": "<button aria-label=\"Go to slide 1\" aria-pressed=\"true\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-800\"><span class=\"sr-only\">Slide 1 (current)</span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 1\"]"
-          ],
+          "target": ["button[aria-label=\"Go to slide 1\"]"],
           "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-pressed=\"true\""
         },
         {
@@ -6450,9 +5792,7 @@
           "all": [
             {
               "id": "aria-allowed-attr",
-              "data": [
-                "aria-pressed=\"false\""
-              ],
+              "data": ["aria-pressed=\"false\""],
               "relatedNodes": [],
               "impact": "critical",
               "message": "ARIA attribute is not allowed: aria-pressed=\"false\""
@@ -6461,9 +5801,7 @@
           "none": [],
           "impact": "critical",
           "html": "<button aria-label=\"Go to slide 2\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 2 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 2\"]"
-          ],
+          "target": ["button[aria-label=\"Go to slide 2\"]"],
           "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-pressed=\"false\""
         },
         {
@@ -6471,9 +5809,7 @@
           "all": [
             {
               "id": "aria-allowed-attr",
-              "data": [
-                "aria-pressed=\"false\""
-              ],
+              "data": ["aria-pressed=\"false\""],
               "relatedNodes": [],
               "impact": "critical",
               "message": "ARIA attribute is not allowed: aria-pressed=\"false\""
@@ -6482,9 +5818,7 @@
           "none": [],
           "impact": "critical",
           "html": "<button aria-label=\"Go to slide 3\" aria-pressed=\"false\" role=\"tab\" class=\"w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-customGold focus-visible:ring-offset-2 bg-gray-300\"><span class=\"sr-only\">Slide 3 </span></button>",
-          "target": [
-            "button[aria-label=\"Go to slide 3\"]"
-          ],
+          "target": ["button[aria-label=\"Go to slide 3\"]"],
           "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-pressed=\"false\""
         }
       ]
@@ -6522,9 +5856,7 @@
               "relatedNodes": [
                 {
                   "html": "<a href=\"https://auctio.netlify.app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"w-full md:w-auto text-center inline-block px-3 py-2 bg-customGold text-white rounded-md text-sm md:text-base hover:opacity-95 shadow-md transition\">View Live Demo</a>",
-                  "target": [
-                    ".hover\\:opacity-95"
-                  ]
+                  "target": [".hover\\:opacity-95"]
                 }
               ],
               "impact": "serious",
@@ -6535,9 +5867,7 @@
           "none": [],
           "impact": "serious",
           "html": "<a href=\"https://auctio.netlify.app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"w-full md:w-auto text-center inline-block px-3 py-2 bg-customGold text-white rounded-md text-sm md:text-base hover:opacity-95 shadow-md transition\">View Live Demo</a>",
-          "target": [
-            ".hover\\:opacity-95"
-          ],
+          "target": [".hover\\:opacity-95"],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.09 (foreground color: #ffffff, background color: #a58f75, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
         }
       ]

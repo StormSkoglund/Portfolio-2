@@ -1,9 +1,9 @@
 export function TechStack() {
   return (
     <>
-      <h3 className="max-w-2xl text-customBlue font-semibold dark:text-gray-200 mt-10 mb-5">
+      <h2 className="max-w-2xl text-customBlue font-semibold dark:text-gray-200 mt-10 mb-5">
         These are the languages and tools I use:
-      </h3>
+      </h2>
       <p className="flex flex-row m-1">
         {[
           {
