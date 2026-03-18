@@ -209,7 +209,7 @@ const App: React.FC = () => {
                             <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
                               Tech Stack:
                             </div>
-                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
+                            <div className="text-sm md:text-base lg:text-xl font-normal text-black">
                               HTML5, JavaScript, Bootstrap, SCSS.
                             </div>
                             <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
@@ -261,7 +261,7 @@ const App: React.FC = () => {
                             <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
                               Tech Stack:
                             </div>
-                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
+                            <div className="text-sm md:text-base lg:text-xl font-normal text-black">
                               React, Vite, JavaScript, Tailwind.
                             </div>
                             <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
@@ -311,7 +311,7 @@ const App: React.FC = () => {
                             <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
                               Tech Stack:
                             </div>
-                            <div className="text-xs md:text-sm lg:text-xl font-light text-black">
+                            <div className="text-sm md:text-base lg:text-xl font-normal text-black">
                               React, Vite, TypeScript, Tailwind.
                             </div>
                             <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
@@ -348,10 +348,10 @@ const App: React.FC = () => {
                         </div>
                       </Slide>
                     </Slider>
-                    <ButtonBack className="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
+                    <ButtonBack className="absolute top-1/3 md:top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
                       <span>Back</span>
                     </ButtonBack>
-                    <ButtonNext className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
+                    <ButtonNext className="absolute top-1/3 md:top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
                       <span>Next</span>
                     </ButtonNext>
                   </CarouselProvider>
