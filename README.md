@@ -1,6 +1,6 @@
-# Portfolio-2
+# Portfolio-2024-25
 
-![Alt text](/public/assets/Screenshot-min.png)
+![Alt text](/public/assets/PORTFOLIO-min.png)
 
 # Welcome to my Frontend Portfolio 2024. Here, you'll find a collection of this year's school projects.
 
@@ -29,5 +29,5 @@ Clone the repository using https://github.com/StormSkoglund/Portfolio-2.git
 
 Images
 
-- Photos credited to Vestland Fylkeskommune were taken by Project Leader Øystein Skår.
+- Photo credited to Vestland Fylkeskommune were taken by Project Leader Øystein Skår.
 - Hero Image, depicts the author of this site, with generated elements by Microsoft Co-Pilot.

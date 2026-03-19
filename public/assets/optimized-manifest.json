@@ -1,0 +1,46 @@
+{
+  "Alex.png": {
+    "webp": "Alex.webp",
+    "avif": "Alex.avif"
+  },
+  "digging-min.jpg": {
+    "webp": "digging-min.webp",
+    "avif": "digging-min.avif"
+  },
+  "Evolution.png": {
+    "webp": "Evolution.webp",
+    "avif": "Evolution.avif"
+  },
+  "holistay.png": {
+    "webp": "holistay.webp",
+    "avif": "holistay.avif"
+  },
+  "mudman.jpg": {
+    "webp": "mudman.webp",
+    "avif": "mudman.avif"
+  },
+  "PORTFOLIO-min.png": {
+    "webp": "PORTFOLIO-min.webp",
+    "avif": "PORTFOLIO-min.avif"
+  },
+  "profile.jpg": {
+    "webp": "profile.webp",
+    "avif": "profile.avif"
+  },
+  "profile2.jpg": {
+    "webp": "profile2.webp",
+    "avif": "profile2.avif"
+  },
+  "screen-buythat.png": {
+    "webp": "screen-buythat.webp",
+    "avif": "screen-buythat.avif"
+  },
+  "Screenshot-min.png": {
+    "webp": "Screenshot-min.webp",
+    "avif": "Screenshot-min.avif"
+  },
+  "semproj2.png": {
+    "webp": "semproj2.webp",
+    "avif": "semproj2.avif"
+  }
+}

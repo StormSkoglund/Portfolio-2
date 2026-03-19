@@ -1,0 +1,17 @@
+# Netlify configuration: force Ubuntu Noble (24.04) build image and standard build settings
+[build]
+  # Use the Noble 24.04 build image (Ubuntu 24.04)
+  image = "ubuntu-24.04"
+
+  # Vite default output is `dist`
+  publish = "dist"
+
+  # Use the project build command
+  command = "npm run build"
+
+[build.environment]
+  # Request Node 24 on the build image (Noble supports 24.x LTS)
+  NODE_VERSION = "24"
+
+# Optional: add headers, redirects or other Netlify settings below
+

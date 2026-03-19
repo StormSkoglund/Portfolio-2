@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: { customBlue: "#0c112d", customGold: "#b89f84" },
+      // Muted, professional palette (softer and more neutral)
+      colors: { customBlue: "#1f2a44", customGold: "#a58f75" },
       keyframes: {
         flicker: {
           "0%, 100%": { boxShadow: "4px 0px 3px #166534" },
@@ -12,7 +14,10 @@ export default {
           "70%": { boxShadow: "0px 4px 20px #166400" },
         },
       },
-      animation: { flicker: "flicker 6s infinite alternate" },
+      animation: {
+        flicker: "flicker 6s infinite alternate",
+        "bounce-once": "bounce 1s ease-in-out 1",
+      },
     },
   },
   plugins: [],

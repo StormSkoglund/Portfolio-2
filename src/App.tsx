@@ -1,368 +1,124 @@
-import {
-  ButtonBack,
-  ButtonNext,
-  CarouselProvider,
-  Slide,
-  Slider,
-} from "pure-react-carousel";
 import React, { useEffect } from "react";
-import { FaArrowRight } from "react-icons/fa";
-import "pure-react-carousel/dist/react-carousel.es.css";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+const ProjectCarousel = React.lazy(
+  () => import("./components/ProjectCarousel")
+);
+import { TechStack } from "./components/tech/TechStack";
+import EmailLink from "./components/EmailLink";
 
 const App: React.FC = () => {
   useEffect(() => {
-    function setCarouselHeight() {
-      const carousel = document.getElementById("carousel");
-      if (carousel) {
-        carousel.style.height = "auto";
-        carousel.style.minHeight =
-          window.innerWidth >= 1024 ? "800px" : "600px";
-      }
-    }
-    // set initial height and wire events
-    setCarouselHeight();
-
-    window.addEventListener("resize", setCarouselHeight);
-    window.addEventListener("load", setCarouselHeight);
-
-    return () => {
-      window.removeEventListener("resize", setCarouselHeight);
-      window.removeEventListener("load", setCarouselHeight);
+    const setCarouselMinHeight = () => {
+      const el = document.getElementById("carousel");
+      if (!el) return;
+      const minH = window.innerWidth >= 768 ? "420px" : "320px";
+      el.style.minHeight = minH;
     };
+
+    setCarouselMinHeight();
+    window.addEventListener("resize", setCarouselMinHeight);
+    return () => window.removeEventListener("resize", setCarouselMinHeight);
   }, []);
 
+  // If we returned from an external navigation (mailto), the page may have
+  // a small marker in sessionStorage. Read it once so we can log/rehydrate any
+  // tiny UI state needed for debugging. Clear immediately after reading.
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem("resume_after_external");
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        // Keep this subtle and not noisy in production; useful while
+        // diagnosing the Chrome interstitial warning.
+        console.info("Resumed after external navigation:", parsed);
+        sessionStorage.removeItem("resume_after_external");
+      }
+    } catch {
+      /* ignore parse/storage errors */
+    }
+  }, []);
+
+  // Emit a lowercase `fetchpriority` attribute (supported by browsers)
+  // without tripping React/TypeScript warnings.
+  const fetchPriorityAttr: Record<string, string> = { fetchpriority: "high" };
+
   return (
-    <>
-      <HelmetProvider>
+    <HelmetProvider>
+      <Helmet>
+        <title>Alex Storm Skoglund — Frontend Portfolio</title>
+        <meta
+          name="description"
+          content="Frontend portfolio showcasing projects and current tech stack."
+        />
+      </Helmet>
+
+      <div className="min-h-screen flex flex-col bg-white text-gray-800 dark:bg-gradient-to-b dark:from-slate-800 dark:to-slate-900 dark:text-white">
         <Header />
-        <div className="flex flex-col justify-center items-center min-h-screen bg-blue-100">
-          <Helmet>
-            <title>Frontend Portfolio 2024 - Alex Storm Skoglund</title>
-            <meta
-              name="description"
-              content="Alex Storm Skoglund's Frontend Portfolio for 2024"
-            />
-          </Helmet>
-          <div className="relative w-full flex flex-col items-center">
-            <div className="flex items-end justify-center mt-6 z-30">
-              <FaArrowRight className="text-base lg:text-5xl text-white opacity-80" />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-1/2 h-full  bg-customBlue opacity-90 flex flex-col justify-start items-center">
-                <p className="text-center text-white font-semibold text-base md:text-4xl lg:text-5xl mt-4">
-                  Archaeologist
-                </p>
-              </div>
-              <div className="w-1/2 h-full  bg-customGold opacity-90 flex flex-col justify-start items-center">
-                <p className="text-center text-customBlue font-semibold text-base md:text-4xl lg:text-5xl mt-4">
-                  Frontend Developer
-                </p>
-              </div>
-            </div>
 
-            <a
-              href="https://github.com/StormSkoglund"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-end justify-center mt-20"
-              aria-label="GitHub link"
-            >
-              <img
-                src="/assets/Alex.png"
-                alt="vertical split image of a man dressed in two different job uniforms."
-                className="w-10/12 sm:w-8/12 lg:w-5/12 xl:w-6/12 h-auto relative shadow-2xl shadow-green-800 hover:animate-flicker rounded-2xl"
-              />
+        <main className="container mx-auto flex-1 p-6">
+          <section className="flex flex-col items-center text-center py-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-customBlue dark:text-customGold">
+              Uncovering the past while shaping the future
+            </h1>
+            <p className="mt-4 max-w-2xl text-gray-700 dark:text-gray-200">
+              I'm Alex — an archaeologist turned frontend developer. I build
+              clear, responsive interfaces with a focus on usability and
+              performance.
+            </p>
+            <TechStack />
+          </section>
 
-              <div className="text-white text-2xl hover:text-blue-400 duration-300 shadow-black absolute">
-                Follow Me On GitHub!
-              </div>
-            </a>
-
-            <div className="flex flex-col items-center bg-slate-300 rounded-2xl p-1 md:p-3 w-10/12 md:w-8/12 opacity-80 mt-8">
-              <h1 className="text-center text-gray-black text-2xl">
-                Uncovering the past while shaping the future!
-              </h1>
-              <p className="w-10/12 mt-5 mb-5">
-                I am Alex, a archaeologist who has transitioned into frontend
-                development, leveraging my analytical skills and attention to
-                detail acquired in the field.
-              </p>
-              <p className="w-10/12">
-                My experience includes proficiency in HTML, CSS, and JavaScript,
-                along with a strong foundation in responsive design and user
-                experience principles.
-              </p>
-              <p className="w-10/12 mb-5">
-                I am passionate about creating intuitive interfaces and engaging
-                web applications, continuously exploring the latest frameworks
-                and technologies to enhance my projects.
-              </p>
-              <p className="w-10/12 mb-5">
-                The following work highlights a selection of websites developed
-                using either plain JavaScript with Bootstrap for styling or
-                React in conjunction with Tailwind, employing the Vite build
-                tool.
-              </p>
-            </div>
-            <h2 className="z-30 font-bold text-xl text-white m-5">
-              My Transformation
-            </h2>
-            <div className="container">
-              <div className="hidden lg:flex flex-row justify-around items-center m-5">
-                <div className="z-30 font-bold text-lg text-white">
-                  Field Archaeology
-                </div>
-                <div className="z-30 font-bold text-lg text-white"></div>
-                <div className="z-30 font-bold text-lg text-customBlue">
-                  Frontend Development
+          <section id="work" className="my-8">
+            <div className="flex flex-col lg:flex-row gap-6 items-start">
+              <div className="w-full lg:w-2/5">
+                <div className="bg-gray-100 rounded-lg overflow-hidden h-full flex items-center">
+                  <picture>
+                    <source srcSet="/assets/mudman.avif" type="image/avif" />
+                    <source srcSet="/assets/mudman.webp" type="image/webp" />
+                    <img
+                      src="/assets/mudman.jpg"
+                      alt="Archaeological dig: mudman"
+                      className="w-full h-full object-cover"
+                      width={1200}
+                      height={800}
+                      loading="eager"
+                      decoding="async"
+                      {...fetchPriorityAttr}
+                    />
+                  </picture>
                 </div>
               </div>
-              <div className="flex flex-col xl:flex-row justify-between align-middle items-center p-3">
-                <CarouselProvider
-                  className="w-full max-w-4xl m-10 h-4/6 relative hover:animate-flicker rounded-2xl bg-slate-300"
-                  naturalSlideWidth={90}
-                  naturalSlideHeight={120}
-                  totalSlides={4}
-                >
-                  <Slider className="h-full">
-                    <Slide
-                      index={0}
-                      className="flex items-center justify-center"
-                    >
-                      <img
-                        src="/assets/mudman.jpg"
-                        alt="A man standing outside in an orange rainjacket, covered in mud"
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                    </Slide>
-                    <Slide
-                      index={1}
-                      className="flex items-center justify-center"
-                    >
-                      <img
-                        src="/assets/digging-min.jpg"
-                        alt="A man sitting in an excavation area in the mountains"
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                    </Slide>
-                    <Slide
-                      index={2}
-                      className="flex items-center justify-center"
-                    >
-                      <img
-                        src="/assets/profile.jpg"
-                        alt="A man working in a trench, dressed in rain gear"
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                    </Slide>
-                    <Slide
-                      index={3}
-                      className="flex items-center justify-center"
-                    >
-                      <img
-                        src="/assets/profile2.jpg"
-                        alt="A man overlooking a dirt wall in a trench, dressed in rain gear"
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                    </Slide>
-                  </Slider>
-                  <ButtonBack className="absolute top-1/2 left-0 transform -translate-y-1/2 opacity-80 bg-gray-800 hover:scale-110 duration-500 rounded-2xl  text-white p-2">
-                    <span>Back</span>
-                  </ButtonBack>
-                  <ButtonNext className="absolute top-1/2 right-0 transform -translate-y-1/2 opacity-80 bg-gray-800 hover:scale-110 duration-500 rounded-2xl  text-white p-2">
-                    <span>Next</span>
-                  </ButtonNext>
-                </CarouselProvider>
-                <img
-                  src="/assets/Evolution.png"
-                  alt="vertical split image of a man dressed in two different job uniforms."
-                  className="w-10/12 m-10 sm:w-8/12 md:w-6/12 opacity-85 lg:w-4/12 xl:w-3/12 h-4/6"
-                />
-                <div
-                  id="carousel"
-                  className="w-full max-w-4xl m-10 relative hover:animate-flicker rounded-2xl bg-slate-300 min-h-[600px] lg:min-h-[800px]"
-                >
-                  <CarouselProvider
-                    className="w-full h-full"
-                    naturalSlideWidth={100}
-                    naturalSlideHeight={140}
-                    totalSlides={3}
+
+              {/* Right: custom slider for ProjectCard (renders links outside slide to avoid nested-interactive) */}
+              <div className="w-full lg:w-3/5">
+                <div className="bg-white/90 rounded-2xl p-4 shadow-lg h-full">
+                  {/* Project carousel (loaded lazily) */}
+                  <React.Suspense
+                    fallback={
+                      <div id="carousel" className="w-full h-80 md:h-96">
+                        {/* simple skeleton to avoid layout shift while loading */}
+                        <div className="w-full h-full bg-gray-100 rounded-lg animate-pulse" />
+                      </div>
+                    }
                   >
-                    <Slider className="h-full overflow-y-auto" id="work">
-                      <Slide
-                        index={0}
-                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
-                      >
-                        <img
-                          src="/assets/semproj2.png"
-                          alt="A screenshot from an auction-house website"
-                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
-                        />
-                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
-                          <div>
-                            <div className="text-sm md:text-base lg:text-xl font-semibold">
-                              Auctio
-                            </div>
-                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
-                              Tech Stack:
-                            </div>
-                            <div className="text-sm md:text-base lg:text-xl font-normal text-black">
-                              HTML5, JavaScript, Bootstrap, SCSS.
-                            </div>
-                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
-                              The Auctio website was part of the Noroff Semester
-                              Project 2 exam; it allows users to search through
-                              an inventory of student-made items and bid on
-                              them. Users may also list their own items for
-                              sale.
-                            </p>
-                          </div>
-                          <div className="mt-3 space-y-2 pb-2">
-                            <a
-                              href="https://github.com/StormSkoglund/Semester-Project-2"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="Auctio GitHub Repo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                Visit GitHub Repository
-                              </p>
-                            </a>
-                            <a
-                              href="https://auctio.netlify.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="Auctio Live Demo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                View Live Demo
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                      </Slide>
-                      <Slide
-                        index={1}
-                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
-                      >
-                        <img
-                          src="/assets/screen-buythat.png"
-                          alt="A screenshot from a online shop"
-                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
-                        />
-                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
-                          <div>
-                            <div className="text-sm md:text-base lg:text-xl font-semibold">
-                              BuyThat
-                            </div>
-                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
-                              Tech Stack:
-                            </div>
-                            <div className="text-sm md:text-base lg:text-xl font-normal text-black">
-                              React, Vite, JavaScript, Tailwind.
-                            </div>
-                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
-                              The BuyThat website, developed for a Noroff
-                              assignment, lets users search for products from a
-                              REST API and simulate purchase.
-                            </p>
-                          </div>
-                          <div className="mt-3 space-y-2 pb-2">
-                            <a
-                              href="https://github.com/StormSkoglund/frontend-frameworks-ca"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="BuyThat GitHub Repository"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                Visit GitHub Repository
-                              </p>
-                            </a>
-                            <a
-                              href="https://buythat.netlify.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="BuyThat Live Demo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                View Live Demo
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                      </Slide>
-                      <Slide
-                        index={2}
-                        className="flex flex-col items-center justify-start h-full p-3 max-h-[80vh] sm:max-h-[70vh] md:max-h-full"
-                      >
-                        <img
-                          src="/assets/holistay.png"
-                          alt="A screenshot from a hotel-booking website"
-                          className="w-full max-h-[36vh] sm:max-h-[28vh] md:max-h-full object-contain rounded-2xl mb-3"
-                        />
-                        <div className="flex-1 text-center flex flex-col justify-between pb-4">
-                          <div>
-                            <div className="text-sm md:text-base lg:text-xl font-semibold">
-                              HoliStay
-                            </div>
-                            <div className="mt-1 text-sm md:text-base lg:text-lg font-normal">
-                              Tech Stack:
-                            </div>
-                            <div className="text-sm md:text-base lg:text-xl font-normal text-black">
-                              React, Vite, TypeScript, Tailwind.
-                            </div>
-                            <p className="mt-1 text-xs md:text-sm lg:text-base p-1 lg:w-9/12 lg:mx-auto border-t-2 border-b-2">
-                              The HoliStay website, developed for the final
-                              Noroff exam, is a booking platform featuring a
-                              user-friendly interface for both customers and
-                              administrators. It allows users to easily search
-                              for and book a variety of available venues, while
-                              also enabling admins to rent out their own venues.
-                            </p>
-                          </div>
-                          <div className="mt-3 space-y-2 pb-2">
-                            <a
-                              href="https://github.com/StormSkoglund/Project-Exam-2"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="HoliStay GitHub Repo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                Visit GitHub Repository
-                              </p>
-                            </a>
-                            <a
-                              href="https://project-exam2.netlify.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label="HoliStay Live Demo"
-                            >
-                              <p className="text-sm md:text-lg lg:text-xl font-bold hover:scale-110 hover:border-2 duration-500 py-2">
-                                View Live Demo
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                      </Slide>
-                    </Slider>
-                    <ButtonBack className="absolute top-1/3 md:top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
-                      <span>Back</span>
-                    </ButtonBack>
-                    <ButtonNext className="absolute top-1/3 md:top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 opacity-70 text-white p-2 duration-500 rounded-2xl">
-                      <span>Next</span>
-                    </ButtonNext>
-                  </CarouselProvider>
+                    <ProjectCarousel />
+                  </React.Suspense>
                 </div>
+                <p className="max-w-2xl text-gray-700 dark:text-gray-200 mt-10 p-2">
+                  I'm available for freelance and full-time opportunities —
+                  let's talk:
+                  <EmailLink className="ml-2 text-customBlue dark:text-gray-200 border-spacing-10 px-3 py-1 bg-customGold rounded-md" />
+                </p>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </main>
+
         <Footer />
-      </HelmetProvider>
-    </>
+      </div>
+    </HelmetProvider>
   );
 };
 
