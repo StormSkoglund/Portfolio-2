@@ -140,12 +140,12 @@ const ProjectCarousel: React.FC = () => {
         </button>
       </div>
 
-      <div className="mt-4 flex justify-center gap-3">
+      <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3">
         <a
           href={projects[activeIndex].repoLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full md:w-auto text-center inline-block px-3 py-2 bg-customBlue text-white rounded-md text-sm md:text-base hover:opacity-90"
+          className="w-full sm:w-auto text-center inline-block px-3 py-2 bg-customBlue text-white rounded-md text-sm md:text-base hover:opacity-90"
         >
           View GitHub
         </a>
@@ -153,7 +153,7 @@ const ProjectCarousel: React.FC = () => {
           href={projects[activeIndex].liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full md:w-auto text-center inline-block px-3 py-2 bg-customGold text-customBlue rounded-md text-sm md:text-base hover:opacity-95 shadow-md transition"
+          className="w-full sm:w-auto text-center inline-block px-3 py-2 bg-customGold text-customBlue rounded-md text-sm md:text-base hover:opacity-95 shadow-md transition"
         >
           View Live Demo
         </a>
