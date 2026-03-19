@@ -4,7 +4,7 @@ export function TechStack() {
       <h2 className="max-w-2xl text-customBlue font-semibold dark:text-gray-200 mt-10 mb-5">
         These are the languages and tools I use:
       </h2>
-      <p className="flex flex-row m-1">
+      <p className="flex flex-row flex-wrap justify-center m-1">
         {[
           {
             href: "https://www.figma.com/",

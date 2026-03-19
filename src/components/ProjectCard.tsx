@@ -27,32 +27,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const [showControls, setShowControls] = React.useState(true);
   const ref = React.useRef<HTMLElement | null>(null);
   const videoRef = React.useRef<HTMLVideoElement | null>(null);
-  const [preferMobileVideo, setPreferMobileVideo] = React.useState(false);
-
-  // The demo videos are currently stored as a single MP4 (no mobile variant).
-  // If a mobile variant is added (e.g. demo-mobile.mp4) this logic will try to
-  // use it on smaller screens, but gracefully fall back to the main file.
-  const mobileVariant = demoVideo
-    ? demoVideo.replace(/(\.[^.]+)$/, "-mobile$1")
-    : undefined;
-  const [videoSrc, setVideoSrc] = React.useState<string | undefined>(demoVideo);
-
-  // Keep the current video source in sync with the active demo and any mobile
-  // preference changes.
-  React.useEffect(() => {
-    setVideoSrc(demoVideo);
-  }, [demoVideo]);
-
-  React.useEffect(() => {
-    if (!demoVideo) {
-      setVideoSrc(undefined);
-      return;
-    }
-
-    setVideoSrc(
-      preferMobileVideo && mobileVariant ? mobileVariant : demoVideo
-    );
-  }, [preferMobileVideo, demoVideo, mobileVariant]);
 
   // Autoplay the demo when the card is mostly visible
   React.useEffect(() => {
@@ -85,27 +59,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     return () => obs.disconnect();
   }, [demoVideo]);
 
-  // Prefer a smaller mobile video variant when the viewport is narrow
-  React.useEffect(() => {
-    if (typeof window === "undefined") return;
-    try {
-      const mq = window.matchMedia?.("(max-width: 640px)");
-      if (mq) {
-        setPreferMobileVideo(mq.matches);
-        const handler = (e: MediaQueryListEvent) =>
-          setPreferMobileVideo(e.matches);
-        // modern API only: keep logic simple and avoid legacy addListener/removeListener
-        if (mq.addEventListener) mq.addEventListener("change", handler);
-        return () => {
-          if (mq.removeEventListener)
-            mq.removeEventListener("change", handler as EventListener);
-        };
-      }
-    } catch {
-      // ignore errors (e.g. SSR or blocked APIs)
-    }
-  }, []);
-
   return (
     <article
       ref={(el) => (ref.current = el)}
@@ -127,9 +80,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <video
             ref={videoRef}
             // Only set `src` when playing to avoid downloading large files early.
-            // Prefer a mobile variant when appropriate, but fall back to the main
-            // file if the mobile variant is missing.
-            src={isPlaying ? videoSrc : undefined}
+            src={isPlaying ? demoVideo : undefined}
             className="w-full h-auto object-contain bg-black"
             controls={showControls}
             autoPlay={isPlaying}
@@ -140,11 +91,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             poster={
               image ? image.replace(/\.(png|jpe?g)$/i, ".avif") : undefined
             }
-            onError={() => {
-              if (videoSrc && demoVideo && videoSrc !== demoVideo) {
-                setVideoSrc(demoVideo);
-              }
-            }}
             // Add a captions track (browser ignores it if the .vtt file is missing).
             onClick={() => {
               const v = videoRef.current;
@@ -166,7 +112,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             // keep looping instead of switching to the poster image when playback ends
           >
             {/* Explicit <source> elements; the `src` above decides which file is used when playing. */}
-            {mobileVariant && <source src={mobileVariant} type="video/mp4" />}
             {demoVideo && <source src={demoVideo} type="video/mp4" />}
             {/* Prefer a same-name captions file (demo.vtt); helpful for accessibility audits. */}
             {demoVideo && (
@@ -272,9 +217,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               {title}
             </div>
           )}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs md:text-sm text-gray-700 dark:text-white mt-1 mb-5">
-            {role && <span className="">{role}</span>}
-            <span className="text-gray-700 dark:text-white border border-solid p-2 break-words whitespace-normal">
+          <div className="text-xs md:text-sm text-gray-700 dark:text-white mt-1 mb-5">
+            {role && <span className="mr-2">{role}</span>}
+            <span className="text-gray-700 dark:text-white border-solid border p-2">
               {stack}
             </span>
           </div>
