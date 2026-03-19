@@ -27,6 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const [showControls, setShowControls] = React.useState(true);
   const ref = React.useRef<HTMLElement | null>(null);
   const videoRef = React.useRef<HTMLVideoElement | null>(null);
+  const [preferMobileVideo, setPreferMobileVideo] = React.useState(false);
 
   // Autoplay the demo when the card is mostly visible
   React.useEffect(() => {
@@ -59,6 +60,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     return () => obs.disconnect();
   }, [demoVideo]);
 
+  // Prefer a smaller mobile video variant when the viewport is narrow
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const mq = window.matchMedia?.("(max-width: 640px)");
+      if (mq) {
+        setPreferMobileVideo(mq.matches);
+        const handler = (e: MediaQueryListEvent) =>
+          setPreferMobileVideo(e.matches);
+        // modern API only: keep logic simple and avoid legacy addListener/removeListener
+        if (mq.addEventListener) mq.addEventListener("change", handler);
+        return () => {
+          if (mq.removeEventListener)
+            mq.removeEventListener("change", handler);
+        };
+      }
+    } catch {
+      // ignore errors (e.g. SSR or blocked APIs)
+    }
+  }, []);
+
+  // Try a `-mobile` filename variant if present (e.g. demo-mobile.mp4)
+  const mobileVariant = demoVideo
+    ? demoVideo.replace(/(\.[^.]+)$/, "-mobile$1")
+    : undefined;
+
   return (
     <article
       ref={(el) => (ref.current = el)}
@@ -80,7 +107,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <video
             ref={videoRef}
             // Only set `src` when playing to avoid downloading large files early.
-            src={isPlaying ? demoVideo : undefined}
+            // Prefer the mobile variant when appropriate.
+            src={
+              isPlaying
+                ? preferMobileVideo && mobileVariant
+                  ? mobileVariant
+                  : demoVideo
+                : undefined
+            }
             className="w-full h-auto object-contain bg-black"
             controls={showControls}
             autoPlay={isPlaying}
@@ -112,6 +146,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             // keep looping instead of switching to the poster image when playback ends
           >
             {/* Explicit <source> elements; the `src` above decides which file is used when playing. */}
+            {mobileVariant && <source src={mobileVariant} type="video/mp4" />}
             {demoVideo && <source src={demoVideo} type="video/mp4" />}
             {/* Prefer a same-name captions file (demo.vtt); helpful for accessibility audits. */}
             {demoVideo && (
