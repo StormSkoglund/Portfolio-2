@@ -29,6 +29,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const videoRef = React.useRef<HTMLVideoElement | null>(null);
   const [preferMobileVideo, setPreferMobileVideo] = React.useState(false);
 
+  // Prefer a smaller mobile video variant when the viewport is narrow.
+  // This keeps the video playback working well on resource-constrained devices.
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const mq = window.matchMedia?.("(max-width: 640px)");
+      if (mq) {
+        setPreferMobileVideo(mq.matches);
+        const handler = (e: MediaQueryListEvent) =>
+          setPreferMobileVideo(e.matches);
+        if (mq.addEventListener) mq.addEventListener("change", handler);
+        return () => {
+          if (mq.removeEventListener)
+            mq.removeEventListener("change", handler as EventListener);
+        };
+      }
+    } catch {
+      // ignore errors (SSR or blocked APIs)
+    }
+  }, []);
+
   // The demo videos are currently stored as a single MP4 (no mobile variant).
   // If a mobile variant is added (e.g. demo-mobile.mp4) this logic will try to
   // use it on smaller screens, but gracefully fall back to the main file.
