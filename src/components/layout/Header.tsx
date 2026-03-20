@@ -58,7 +58,7 @@ const Header: React.FC = () => {
             />
           </picture>
           <div className="text-small w-52 lg:w-auto text-wrap lg-no-wrap font-medium text-current drop-shadow-2xl lg:text-2xl lg:font-semibold hide-on-xs">
-            Frontend Portfolio 2024 - Alex Storm Skoglund
+            Frontend Portfolio - Alex Storm Skoglund
           </div>
         </div>
 
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
                   JSON.stringify({
                     pathname: window.location.pathname,
                     ts: Date.now(),
-                  })
+                  }),
                 );
               } catch {
                 /* ignore storage errors */
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
                 window.open(
                   `mailto:${user}@${domain}`,
                   "_blank",
-                  "noopener,noreferrer"
+                  "noopener,noreferrer",
                 );
               } catch {
                 window.location.replace(`mailto:${user}@${domain}`);
@@ -216,7 +216,7 @@ const Header: React.FC = () => {
                       });
                       window.setTimeout(
                         () => target.classList.remove("somo-animate"),
-                        700
+                        700,
                       );
                     }
                     // update the URL fragment for deep-linking

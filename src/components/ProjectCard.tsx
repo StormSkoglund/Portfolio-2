@@ -269,9 +269,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           )}
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs md:text-sm text-gray-700 dark:text-white mt-1 mb-5 min-w-0">
-            {role && (
-              <span className="min-w-0">{role}</span>
-            )}
+            {role && <span className="min-w-0">{role}</span>}
             <span className="min-w-0 flex-1 text-gray-700 dark:text-white border border-solid p-2 break-words whitespace-normal">
               {stack}
             </span>
