@@ -34,11 +34,20 @@ const ProjectCarousel: React.FC = () => {
         image: "/assets/holistay.png",
         demoVideo: "/assets/holistaydemo_.mp4",
       },
+      {
+        title: "Full‑Stack Rehearsal Booking System with Public Guest Demo",
+        role: "Band Booking System",
+        stack: "React, Supabase, Vite, TypeScript, CSS",
+        description: `A live band practice booking system built with React, Supabase and FullCalendar scheduling, supported by AI-assisted tooling.`,
+        repoLink: "https://github.com/StormSkoglund/ORK-Binger",
+        liveLink: "https://guest-musikkbingene.netlify.app/",
+        demoVideo: "/assets/screenrecordingmusic.mp4",
+      },
     ];
 
     // In tests we disable demo videos to avoid autoplay/IntersectionObserver
     // behavior that can cause React test warnings.
-    if (process.env.NODE_ENV === "test") {
+    if (import.meta.env.MODE === "test") {
       return base.map((p) => ({ ...p, demoVideo: undefined }));
     }
 

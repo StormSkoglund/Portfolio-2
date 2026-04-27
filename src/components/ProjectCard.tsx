@@ -263,12 +263,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <h2 className="text-base md:text-lg lg:text-xl font-semibold text-customBlue">
             {title}
           </h2>
-          {!image && (
-            <div className="mt-4 text-center text-lg font-medium text-gray-800">
+          {!image && !demoVideo && (
+            <div className="mt-0 text-center text-lg font-medium text-gray-800">
               {title}
             </div>
           )}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs md:text-sm text-gray-700 dark:text-white mt-1 mb-5 min-w-0">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs md:text-sm text-gray-700 dark:text-white mt-0 mb-3 min-w-0">
             {role && <span className="min-w-0">{role}</span>}
             <span className="min-w-0 flex-1 text-gray-700 dark:text-white border border-solid p-2 break-words whitespace-normal">
               {stack}

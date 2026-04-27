@@ -73,7 +73,7 @@ const App: React.FC = () => {
           <section id="work" className="my-8">
             <div className="flex flex-col lg:flex-row gap-6 items-start">
               <div className="w-full lg:w-2/5">
-                <div className="bg-gray-100 rounded-lg overflow-hidden h-[220px] sm:h-[280px] md:h-[340px] lg:h-[420px] flex items-center">
+                <div className="rounded-lg overflow-hidden h-[240px] sm:h-[320px] md:h-[420px]">
                   <img
                     src="/assets/mig.jpg"
                     alt="Portrait of Alex Storm Skoglund"
