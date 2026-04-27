@@ -38,7 +38,7 @@ const ProjectCarousel: React.FC = () => {
         title: "Full‑Stack Rehearsal Booking System with Public Guest Demo",
         role: "Band Booking System",
         stack: "React, Supabase, Vite, TypeScript, CSS",
-        description: `A live band practice booking system built with React, Supabase and FullCalendar scheduling, supported by AI-assisted tooling.`,
+        description: `A live band practice booking system with an active user base, built with React, Supabase, and FullCalendar scheduling, and supported by AI-assisted tooling.`,
         repoLink: "https://github.com/StormSkoglund/ORK-Binger",
         liveLink: "https://guest-musikkbingene.netlify.app/",
         demoVideo: "/assets/screenrecordingmusic.mp4",
