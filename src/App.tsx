@@ -3,7 +3,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 const ProjectCarousel = React.lazy(
-  () => import("./components/ProjectCarousel")
+  () => import("./components/ProjectCarousel"),
 );
 import { TechStack } from "./components/tech/TechStack";
 import EmailLink from "./components/EmailLink";
@@ -73,21 +73,17 @@ const App: React.FC = () => {
           <section id="work" className="my-8">
             <div className="flex flex-col lg:flex-row gap-6 items-start">
               <div className="w-full lg:w-2/5">
-                <div className="bg-gray-100 rounded-lg overflow-hidden h-full flex items-center">
-                  <picture>
-                    <source srcSet="/assets/mudman.avif" type="image/avif" />
-                    <source srcSet="/assets/mudman.webp" type="image/webp" />
-                    <img
-                      src="/assets/mudman.jpg"
-                      alt="Archaeological dig: mudman"
-                      className="w-full h-full object-cover"
-                      width={1200}
-                      height={800}
-                      loading="eager"
-                      decoding="async"
-                      {...fetchPriorityAttr}
-                    />
-                  </picture>
+                <div className="bg-gray-100 rounded-lg overflow-hidden h-[220px] sm:h-[280px] md:h-[340px] lg:h-[420px] flex items-center">
+                  <img
+                    src="/assets/mig.jpg"
+                    alt="Portrait of Alex Storm Skoglund"
+                    className="w-full h-full object-cover object-top"
+                    width={1200}
+                    height={800}
+                    loading="eager"
+                    decoding="async"
+                    {...fetchPriorityAttr}
+                  />
                 </div>
               </div>
 
